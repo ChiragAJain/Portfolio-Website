@@ -5,6 +5,9 @@ body{
     position:relative;
     margin:0
 }
+hr{
+    position:relative
+}
 .nav-panel{
     width:10vw;
     height:100vh;
@@ -13,22 +16,22 @@ body{
     float:left;
     background-color: #627254;
     text-align:right;
-    padding: 25px 25px 0 0;
+    padding: 10vh 25vw 0 0;
 }
 .nav-panel a{
     text-decoration: None;
-    font-size:1.5em;
+    font-size:1.5vw;
     font-family: 'Zilla Slab','serif';
     color:#F5EFE6;
 }
 .nav-panel div{
-    padding-bottom:25px;
+    padding-bottom:1vw;
     position:relative;
 }
 .vert-line{
     height:103.5vh;
-    width:1px;
-    border-left:1px solid #1A4D2E;
+    width:1vw;
+    border-left:1vw solid #1A4D2E;
     float:inline-start
 }
 .content{
@@ -44,14 +47,14 @@ body{
     display:inline-block;
     position:relative;
     height:40vh;
-    width:30%;
+    width:25vw;
 }
 #About-me h1{
     position:absolute;
-    top:100%;
-    left:16%;
+    top:40vh;
+    left:4.5vw;
     font-family:'Zilla Slab','Times New Roman';
-    font-size:2.5em;
+    font-size:2.5vw;
 
 }
 #resume{
@@ -75,10 +78,10 @@ body{
 
 
 .profile-img{
-    padding-left:10px;
-    padding-top:10px;
+    padding-left:1svw;
+    padding-top:2vh;
     float:left;
-    width:80%;
+    width:20vw;
 
 }
 .About-me{
@@ -86,42 +89,46 @@ body{
     display:inline-block;
     top:0%;
     font-family:'Zilla Slab','Times New Roman';
-    margin-left:-3%;
+    margin-left:-3vw;
     text-align:justify;
     width:60vw;
-    font-size:1.5rem;
+    font-size:1.55vw;
 }
 /*Education*/
 #Education{
     display:inline-block;
     position:absolute;
-    margin-top:-2%;
-    padding-left:4.5%;
+    margin-top:-2vh;
+    padding-left:4.5vw;
     width:80vw;
     font-family:'Zilla Slab', 'Times New Roman';
+    padding-bottom:10vh !important;
 }
 #Education p{
-    font-size:1.25rem;
-    margin-top:-1%;
+    font-size:1.25vw;
+    margin-top:-1vh;
 }
 .Year{
     position:flex;
     float:right;
-    margin-top:-2.5% !important;
+    margin-top:-2.5vh !important;
     font-family:'Times New Roman';
-    font-size:1.1rem !important;
+    font-size:1.1vw !important;
 }
 /*Certifications*/
 #Certification{
     display:inline-block;
     position:relative;
     font-family:'zilla Slab','Times New Roman';
-    margin-top:-2%;
-    padding-left:4.5%;
+    margin-top:-3vh;
+    padding-left:4.5vw;
     width:80vw;
 }
+#Certification h1{
+    margin-bottom:4.5vh;
+}
 #Certification a{
-    font-size:1.25rem;
+    font-size:1.25vw;
     display:block;
     color: black;
     text-decoration: None;
@@ -132,8 +139,8 @@ body{
     font-family:'zilla Slab','Times New Roman';
     display:inline-block;
     position:relative;
-    margin-top:-2%;
-    padding-left:4.5%;
+    margin-top:-1vw;
+    padding-left:4.5vw;
     width:80vw;
 }
 #Projects a{
@@ -144,33 +151,40 @@ body{
 #Projects li{
     font-size:1.25vw;
 }
-
+.iframe-parent{
+    width: 35vw;
+    height: 40vh;
+  }
+iframe{
+    width: 100%;
+    height: 100%;
+  }
 /*Contact*/
 #Contact{
     font-family:'zilla Slab','Times New Roman';
-    padding-left:4.5%;
+    padding-left:4.5vw;
     width:80vw;
     display:inline-block;
     position:relative;
-    margin-top:-2%;
-    font-size:1.2rem;
+    margin-top:-3vh;
+    font-size:1.2vw;
 }
 #Contact h1{
-    margin-bottom:0;
+    margin-bottom:2vh;
 }
 #Contact a{
     text-decoration:none;
-    font-size:1.2rem;
+    font-size:1.2vw;
     color: black;
-    top: -3%;
+    top: -3vh;
 }
 #Contact img{
     display:inline-block;
-    margin-right:1%
+    margin-right:1vw
 }
 
 #Contact p{
-    font-size:1.3rem;
+    font-size:1.3vw;
     font-weight:bold;
     font-family: 'Zilla Slab','Times New Roman';
     display:inline-block;
