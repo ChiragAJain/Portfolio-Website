@@ -16,7 +16,7 @@ hr{
     float:left;
     background-color: #627254;
     text-align:right;
-    padding: 10vh 25vw 0 0;
+    padding: 10vh 2vw 0 0;
 }
 .nav-panel a{
     text-decoration: None;
@@ -36,10 +36,11 @@ hr{
 }
 .content{
     width:86.992vw;
-    height:100% ;
+    height:100vh ;
     position:relative;
     background-color: #F5EFE6;
     float:right;
+    background:fixed;
 }
 
 /*About Me*/
@@ -189,4 +190,87 @@ iframe{
     font-family: 'Zilla Slab','Times New Roman';
     display:inline-block;
     margin-top:0;
+}
+/*Blogs*/
+#Title{
+    font-family:'Zilla Slab','Times New Roman';
+    font-size:2vw;
+    margin-left:1vw;
+}
+#Blog-card{
+    background-color:#F5EFE6;
+    width:20vw;
+    height:42.5svh;
+    border-radius:10px;
+    margin-left:2vw;
+    display:inline-block;
+}
+.Blog-title{
+    font-size: 1.5vw;
+    font-family: 'Zilla Slab','Times New Roman';
+    text-align:left;
+    margin:1vw;
+}
+.Blog-desc{
+    font-size:1.3vw;
+    font-family: 'Zilla Slab','Times New Roman';
+    font-weight: 400;
+    text-align:justify;
+    margin:1vw;
+}
+#Blog-btn{
+    margin-left:4.5vw;
+    width:10vw;
+    height:2vw;
+    background-color: #627254;
+    border:None;
+    border-radius:0.2vw;
+    transition:0.3s;
+    cursor:pointer;
+    text-decoration:nones;
+    color:#F5EFE6
+}
+#Blog-btn:hover{
+    background-color: #1A4D2E;
+}
+/*Blog-Content*/
+#view-count{
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'Zilla Slab','Times New Roman';
+}
+#blog-Title{
+    font-size: 2.5vw;
+    font-family: 'Zilla Slab','Times New Roman';
+    text-align:center;
+    margin:2vw;
+}
+#blog-Content{
+    font-size:1.5vw;
+    font-family: 'Zilla Slab','Times New Roman';
+    text-align:justify;
+    margin:2vw;
+}
+#blog-Code{
+    font-family:monospace;
+    font-size:1.2vw;
+    background-color:#7e956a;
+    color:white;
+    width:60vw;
+    height:auto;
+}
+#blog-Code p{
+    margin-left:1vw;
+    padding:0.5vw;
+    text-align: left;
+}
+#blog-Content em{
+    font-size:1.25vw;
+    font-weight:bold;
+}
+#blog-Code-Snippets{
+    width:35vw;
+    position:relative;
+    padding-bottom:3vh;
+    
 }

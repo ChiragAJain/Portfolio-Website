@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirag Jain|AstroPy</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-panel" style="width:10vw;">
+        <div><a href="/index.html">Home</a></div>
+        <div><a href="/Blog.html">Blogs</a></div>
+    </div>
+    <div class="vert-line"></div>
+    <div class="content">
+        <h1 id="blog-Title">AstroPy: Astrophysics using Python </h1>
+        <p id="view-count">Views: Loading...</p>
+        <script>
+            const endpoint = 'https://api.countapi.xyz/hit/ChiragAJain.github.io/Portfolio-Website/Blogs/Astropy.html/visits';
+            fetch(endpoint)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('view-count').innerText = `Views: ${data.value}`;
+                })
+                .catch(error => console.error('Error fetching view count:', error));
+        </script>
+        <hr>
+        <div id="blog-Content">
+            <h2>Introduction</h2>
+            <p>
+                Astrophysics, one of the most advanced and intriguing fields in science, brings together brilliant minds and high performance computing to transform enormous amount of raw data into human comprehensible information that expands our knowledge about the known Universe. <br>
+                <br> Python, a widely-used, easy-to-understand, language is often used for data science and analytics. It has several libraries that could be beneficial in knowledge discovery in Astrophysics. I will be discussing one such library, called AstroPy.<br>
+                <br> 
+                AstroPy is a community-driven, open-source library that offers a wide range of core functionalities for astronomy. It supports various file formats, including Flexible Image Transport System (FITS) files, Virtual Observatory (VO) tables, common ASCII table formats, and provides tools for handling physical constants, units, celestial coordinates, and time calculations.
+                Geeting to know this versatile package is a must for anyone exploring astronomy and astrophysics through Python. Designed to streamline common astronomical tasks, AstroPy also ensures standardized data structures for efficient analysis. For data science students branching into astrophysics, AstroPy serves as a user-friendly gateway into this fascinating field.
+            </p>
+            <h2>Installation</h2>
+            <p>You can install AstroPy by inserting the following command in your Python terminal: </p>
+            <div id="blog-Code">
+                <p>python.exe -m pip install astropy</p>
+            </div>
+            <p>
+                Make sure you have properly set up your python environment. You can try installing it directly through popular IDEs like PyCharm or VSCode. 
+                <br>                 
+            </p>
+            <h2>Getting to Know AstroPy</h2>
+            <p>
+                AstroPy enables seamless unit conversion for various calculations. In this example, I demonstrate how to calculate the speed of light between the Sun and Earth in both light-years per second and kilometers per second, effortlessly converting between units.
+            </p>
+            <div id="blog-Code">
+                <p>from astropy import units <br>
+                    <br>
+                    <i>#Calculating speed of light between the Sun and Earth</i> <br>
+                    <i>#during Winter Solstice (December 21)</i> <br>
+                    distanceSE =  147090000 * units.km <br>
+                    distanceSELy = distanceSE.to(units.lightyear) <i>#Converting to LightYear</i> <br>
+                    time = 497 * units.s <i>#Time in Seconds</i> <br>
+                    speed = distanceSELy / time <br>
+                    print("Speed of Light between Sun and Earth (LightYear/Sec) = {:.10f}".format(speed)) <br>
+                    print("Speed of Light between Sun and Earth (Km/Sec) = {:.4f}".format(speed.to(units.km/units.s))) <br></p>
+            </div>
+            <div id="blog-Code">
+                <p><strong>Output:</strong><br>
+                    Speed of Light between Sun and Earth (LightYear/Sec) = 0.0000000313 lyr / s<br>
+                    Speed of Light between Sun and Earth (Km/Sec) = 295955.7344 km / s</p>
+            </div>
+            <p>
+                AstroPy can also handle astronomical coordinates. In Layman's term, <strong>Right Acension(ra)</strong> is the celestial longitude and <strong>Declination(dec)</strong> is the celestial latitude. <br>
+                The Coordinates module in AstroPy helps in working with the celestial coordinate system.
+            </p>
+            <div id="blog-Code">
+                <p>from astropy.coordinates import get_sun <br>
+                from astropy.time import Time <br>
+                my_time = Time.now() <i>#Current Time</i><br>
+                print(get_sun(my_time)) <i>#Coordinates of Sun in Right Acension, Declination, and Distance in AU</i><br>
+                print(get_sun(my_time).to_string(style='hmsdms')) <i>#Coordinates of Sun in Hours-Minute-Second Format</i><br></p>
+            </div>
+            <div id="blog-Code">
+                <p><strong>Output:</strong><br>
+                    SkyCoord (GCRS: obstime=2024-12-28 03:15:20.792177, obsgeoloc=(0., 0., 0.) m, obsgeovel=(0., 0., 0.) m / s): (ra, dec, distance) in (deg, deg, AU)
+                    <br>(277.10557264, -23.27546755, 0.98343585) <br>
+                    18h28m25.33743467s -23d16m31.68318593s <br></p>
+            </div>
+            <p>I have two outputs, one is in the degree format whereas the other is in hmsdms format. hmsdms is a widely used format in the astronomy community, where</p>
+            <table border="1" style="width: 30vw; border-collapse: collapse;text-align:center">
+                <tr>
+                    <th><i>Right Ascension (ra)</i></th>
+                    <th><i>Declination (dec)</i></th>
+                </tr>
+                <tr>
+                    <td><strong>H:</strong> Hours</td>
+                    <td><strong>D:</strong> Degrees</td>
+                </tr>
+                <tr>
+                    <td><strong>M:</strong> Minutes</td>
+                    <td><strong>M:</strong> Minutes</td>
+                </tr>
+                <tr>
+                    <td><strong>S:</strong> Seconds</td>
+                    <td><strong>S:</strong> Seconds</td>
+                </tr>
+            </table>
+            <br>
+            <p>Hence, the Sun at the time of writing this is located at "18 Hours 28 Minutes 25.33 Seconds" ra and "-23 Degrees 16 Minutes 31.68 Seconds" dec.</p>
+            <p>
+                AstroPy is also capable of processing FITS files. Flexible Image Transport System (FITS) are essentially scientific data files composed of multi-dimensional arrays and 2-D tables. They are widely used within astronomy to transport, analyse and archive files. <br>
+                I am using a FITS file that I acquired from a dataset on Kaggle to show how AstroPy can easily process these files and plot it using the Matplotlib package. <br>
+            </p>
+            <div id="blog-Code">
+                <p>
+                from astropy.io import fits
+                import matplotlib.pyplot as plt
+    
+                hdulist = fits.open("BlogExample.FTZ") <i>#Opening the FITS file</i> <br>
+                hdulist.info() <i>#Printing the meta data of the FITS file</i> <br>
+                data = hdulist[0].data <br>
+                print(data.shape) <i>Printing the shape of the data</i> <br>
+                hdulist.close() <br>
+                <i>#Plotting the data</i> <br>
+                plt.figure(figsize=(8, 8))
+                plt.imshow(data, cmap='gray', origin='lower') <br>
+                plt.colorbar(label='Pixel Intensity') <br>
+                plt.title('FITS Image') <br>
+                plt.xlabel('X Pixels') <br>
+                plt.ylabel('Y Pixels') <br>
+                <i>#Saving the image</i> <br>
+                output_image = 'Image.png' <br>
+                plt.savefig(output_image) <br>
+                plt.show() <br>
+                </p>
+                
+            </div>
+            <div id="blog-Code">
+                <p><strong>Output:</strong><br>
+                    Filename: BlogExample.FTZ
+                </p>
+                <table style="border-collapse: collapse; width: 100%; text-align: left; margin-left:1.5vw;">
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Ver</th>
+                        <th>Type</th>
+                        <th>Cards</th>
+                        <th>Dimensions</th>
+                        <th>Format</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>PRIMARY</td>
+                        <td>1</td>
+                        <td>PrimaryHDU</td>
+                        <td>68</td>
+                        <td>(1046, 1079)</td>
+                        <td>float32</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>EXPOSURE</td>
+                        <td>1</td>
+                        <td>ImageHDU</td>
+                        <td>8</td>
+                        <td>(1046, 1079)</td>
+                        <td>float32</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>QUALITY</td>
+                        <td>1</td>
+                        <td>ImageHDU</td>
+                        <td>9</td>
+                        <td>(1046, 1079)</td>
+                        <td>int16</td>
+                    </tr>
+                </table>
+                <p>
+                    (1079, 1046)
+                </p>
+            </div>
+            <img id="blog-Code-Snippets" style="border:solid 2px" src="/Images/Blogs/BlogExampleOutput.png" alt="BlogExampleOutput">
+            <p>In the output, we have listed out the meta data of the FITS file and the image of the FITS file. <br></p>
+            <h2>Conclusion</h2>
+            <p>
+                Astropy offers a powerful toolkit to explore the universe computationally. Its flexibility and comprehensiveness make it a valuable resource for data science enthusiasts stepping into astronomy. By mastering its basics, you can unlock countless opportunities for interdisciplinary projects. <br>
+                As a learning data scientist, this could be your stepping stone to discovering how data-driven approaches revolutionize our understanding of the cosmos. Happy exploring!
+            </p>
+        </div>
+        <hr>
+        <br>
+        <p style="text-align:center;opacity:0.7">© Copyright 2024 | Made by Chirag Jain</p>
+    </div>
+</body>
+</html>
