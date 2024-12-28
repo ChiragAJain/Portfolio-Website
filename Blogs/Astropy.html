@@ -18,7 +18,6 @@
     <div class="vert-line"></div>
     <div class="content">
         <h1 id="blog-Title">AstroPy: Astrophysics using Python </h1>
-        <p id="view-count">Views: Loading...</p>
         <hr>
         <div id="blog-Content">
             <h2>Introduction</h2>
@@ -171,7 +170,7 @@
                     (1079, 1046)
                 </p>
             </div>
-            <img id="blog-Code-Snippets" style="border:solid 2px" src="../Images/Blogs/BlogExampleOutput.png" alt="BlogExampleOutput">
+            <img id="blog-Code-Snippets" style="border:solid 2px" src="../Images/Blogs/BlogExampleOutput.PNG" alt="BlogExampleOutput">
             <p>In the output, we have listed out the meta data of the FITS file and the image of the FITS file. <br></p>
             <h2>Conclusion</h2>
             <p>
@@ -183,14 +182,5 @@
         <br>
         <p style="text-align:center;opacity:0.7">© Copyright 2024 | Made by Chirag Jain</p>
     </div>
-    <script>
-            const endpoint = 'https://api.countapi.xyz/hit/ChiragAJain.github.io/Portfolio-Website/Blogs/Astropy.html/visits';
-            fetch(endpoint)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('view-count').innerText = `Views: ${data.value}`;
-                })
-                .catch(error => console.error('Error fetching view count:', error));
-        </script>
 </body>
 </html>
