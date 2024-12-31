@@ -49,17 +49,17 @@ hr{
     position:relative;
     height:40vh;
     width:25vw;
+    
 }
 #About-me h1{
-    position:absolute;
-    top:40vh;
-    left:4.5vw;
+    position:relative;
+    margin-left:4.5vw;
     font-family:'Zilla Slab','Times New Roman';
     font-size:2.5vw;
 
 }
 #resume{
-    width:8vw;
+    width:6vw;
     height:4vh;
     position:absolute;
     margin-top:-1.5vh;
@@ -68,7 +68,7 @@ hr{
     border-radius:0.2vw;
     transition:0.3s;
     cursor:pointer;
-    text-decoration:nones;
+    text-decoration:none;
     color:#F5EFE6
 }
 
@@ -79,8 +79,8 @@ hr{
 
 
 .profile-img{
-    padding-left:1svw;
-    padding-top:2vh;
+    padding-left:1vw;
+    padding-top:4vh;
     float:left;
     width:20vw;
 
@@ -88,22 +88,18 @@ hr{
 .About-me{
     position:absolute;
     display:inline-block;
-    top:0%;
     font-family:'Zilla Slab','Times New Roman';
-    margin-left:-3vw;
     text-align:justify;
     width:60vw;
     font-size:1.55vw;
 }
 /*Education*/
 #Education{
-    display:inline-block;
-    position:absolute;
-    margin-top:-2vh;
+    display:block;
+    position:relative;
     padding-left:4.5vw;
     width:80vw;
     font-family:'Zilla Slab', 'Times New Roman';
-    padding-bottom:10vh !important;
 }
 #Education p{
     font-size:1.25vw;
@@ -118,10 +114,9 @@ hr{
 }
 /*Certifications*/
 #Certification{
-    display:inline-block;
+    display:block;
     position:relative;
     font-family:'zilla Slab','Times New Roman';
-    margin-top:-3vh;
     padding-left:4.5vw;
     width:80vw;
 }
@@ -138,9 +133,8 @@ hr{
 /*Project*/
 #Projects{
     font-family:'zilla Slab','Times New Roman';
-    display:inline-block;
+    display:block;
     position:relative;
-    margin-top:-1vw;
     padding-left:4.5vw;
     width:80vw;
 }
@@ -165,7 +159,7 @@ iframe{
     font-family:'zilla Slab','Times New Roman';
     padding-left:4.5vw;
     width:80vw;
-    display:inline-block;
+    display:block;
     position:relative;
     margin-top:-3vh;
     font-size:1.2vw;
@@ -274,3 +268,4 @@ iframe{
     padding-bottom:3vh;
     
 }
+
