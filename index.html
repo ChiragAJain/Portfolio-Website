@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,185 +8,436 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div style="z-index:99;width:100vw;position:fixed;display:block;font-size:1vw;font-weight:bold;font-family: 'Zilla Slab','Times New Roman';text-align:center;background-color:rgb(255, 253, 156)"><em>Note: This website is only viewable in Desktop Mode. Kindly view the pages only on a Laptop/Desktop. You can liverage the use of desktop option on mobile for a better experience</em></div>
+
     <div class="nav-panel">
-        <div><a href="#About-me">About Me</a></div>
-        <div><a href="#Education">Education</a></div>
-        <div><a href="#Certification">Certifications</a></div>
-        <div><a href="#Projects">Projects</a></div>
-        <div><a href="#Contact">Contact & Socials</a></div>
-        <div><a href="Blog.html">Blogs</a></div>
+        <a href="#" class="nav-brand">Chirag Jain</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <div><a href="#About-me" onclick="closeMenu()">About Me</a></div>
+            <div><a href="#Education" onclick="closeMenu()">Education</a></div>
+            <div><a href="#Certification" onclick="closeMenu()">Certifications</a></div>
+            <div><a href="#Projects" onclick="closeMenu()">Projects</a></div>
+            <div><a href="#Contact" onclick="closeMenu()">Contact & Socials</a></div>
+            <div><a href="Blog.html">Blogs</a></div>
+        </div>
     </div>
     <div class="vert-line"></div>
     <div class="content">
-        <div id="About-me">
-            <img class="profile-img" src="Images/IMG_20230102_173954-modified.png" alt="Chirag_image">
-            <h1>Chirag Jain</h1>
-        </div>
         <div class="About-me">
             <h1>PORTFOLIO</h1>
+            <img class="profile-img" src="Images/IMG_20230102_173954-modified.png" alt="Chirag_image">
+            <h2 class="name-title">Chirag Jain</h2>
             <p>Hi! 👋 I am Chirag</p>
-            <p>A Data Science enthusiasst, and a junior at Vellore Institute of Technology, Amravati, Andhra Pradesh, India.
-            I am currently pursuing B.Tech in Computer Science and Engineering Core 💻.
+            <p>A Data Science enthusiasst, and a junior at Vellore Institute of Technology, Amravati, Andhra Pradesh,
+                India.
+                I am currently pursuing B.Tech in Computer Science and Engineering Core 💻.
             </p>
             <p>
-                ✨General Interests:   Astronomy, Cooking, Slice-of-life games
+                ✨General Interests: Astronomy, Cooking, Slice-of-life games
             </p>
-            <a class="resume" href="https://drive.google.com/file/d/1odDhDKcSp2bD0QjeTSgcN2Ok5g_Nnv7Z/view?usp=sharing"><button id="resume">Resume</button></a>
+            <div class="intro-links">
+                <div class="resume-buttons">
+                    <a class="resume"
+                        href="https://drive.google.com/file/d/1AykCNONSFNvBx3T9oW3Ma6aEjlMEg-CC/view?usp=sharing">
+                        <button id="resume">General Resume</button>
+                    </a>
+                    <a class="resume"
+                        href="https://drive.google.com/file/d/146YuPMJn37BvWLS3fI36vDh_b4zlLeY-/view?usp=sharing">
+                        <button id="ai-resume">AI Resume</button>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a class="social-link github-link-intro" href="https://github.com/ChiragAJain" title="GitHub">
+                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                    </a>
+                    <a class="social-link linkedin-link-intro" href="https://linkedin.com/in/chiragajain/"
+                        title="LinkedIn">
+                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-        <hr style="margin-top:10vh;">
+        <hr>
         <div id="Education">
             <h1>Education</h1>
-            <h2>Vellore Institute of Technology - Amaravati, Andra Pradesh</h2>
-            <strong><p class="Year">2022-2026</p></strong>
-            <p style="margin-top:-1vh">B.Tech of Computer Science and Engineering Core </p>
-            <p>Current CGPA: 9.18</p>
-            <h2>Chennai Public School - Chennai, Tamil Nadu</h2>
-            <strong><p class="Year">2020-2022</p></strong>
-            <p>Central Board of Secondary Education (CBSE)</p>
-            <p>Senior Secondary</p>
-            <p>Percentage: 92.6%</p>
+            <div>
+                <h2>Vellore Institute of Technology - Amaravati, Andhra Pradesh</h2>
+                <p class="Year">2022-2026</p>
+                <p>B.Tech of Computer Science and Engineering Core</p>
+                <p>Current CGPA: 9.18</p>
+            </div>
+            <div>
+                <h2>Chennai Public School - Chennai, Tamil Nadu</h2>
+                <p class="Year">2020-2022</p>
+                <p>Central Board of Secondary Education (CBSE)</p>
+                <p>Senior Secondary</p>
+                <p>Percentage: 92.6%</p>
+            </div>
         </div>
-        <hr style="position:relative;">
+        <hr>
         <div id="Certification">
             <h1>Certifications</h1>
-            <ul style="margin-top:-4vh;">
-                <li><a href="https://www.datacamp.com/statement-of-accomplishment/track/0a4298b7916412a7c06bf18106b5171c0814369d?raw=1">R Programming Certification<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.datacamp.com/statement-of-accomplishment/track/30b2f8669a3a747360ae40fac88ee5135fb8757e">Data Analyst with R Certification<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/739444f60cc5a4449fcaa1d49395c2c3">What is Data Science<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/d3d33a2711801d585f73a9f8abaa28ac">Tools for Data Science<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/989874dd2748f8efd49f60bae3041916">Data Science Methodology<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/NBZSL465RPYH">Python for Data Science,AI and development<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/62H6K6TTBE7G">Python Project for Data Science<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/AM5KKX3E8KPA">Database and SQL for Data Science with Python<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/N86NPM5UN2WV">Data Analysis with Python<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/4JJTHNW429VR">Data Visualisation with Python<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/ROQP7817ORD0">Machine Learning with Python<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/b526cc394c58d9e54033c33fcd1b3e50">Generative AI: Elevate Your Data Science Career<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/d96b1a6ac9fb8ac52fb8087dedad42a0">Data Scientist Career Guide and Interview Preparation<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://drive.google.com/file/d/1bAGgQHWw3J-GOiMC0N_eqJcRMFSIC5lx/view?usp=sharing">ISRO IIRS DLP - Exploring Earth's Moon through Chandrayaan<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://drive.google.com/file/d/1aeKzkZgqx22Evbn_FqLqNcL_VGk7ZeRD/view?usp=sharing">ISRO IIRS DLP - Aditya L1: India's first space based observatory<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.udemy.com/certificate/UC-9b519503-7265-43a6-9da4-f756634a48eb/">The Complete Python Developer Course - ZerotoMastery Academy<img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></li>
+            <ul>
+                <h2>Professional Certifications</h2>
+                <li><a
+                        href="https://cp.certmetrics.com/amazon/en/public/verify/credential/2e40fde9b797442485729be9475e04ed">AWS
+                        Solution Architect Associate (SAA-C03)<img style="width:16px;" src="Images/maximize.png"
+                            alt="link"></a></li>
+                <li><a href="https://coursera.org/share/3381fa8eec34937cfe44af7ffa21ed71">IBM Professional Data Science
+                        Certification<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <hr>
+                <h2>Fundamental Certifications</h2>
+                <li><a
+                        href="https://www.datacamp.com/statement-of-accomplishment/track/0a4298b7916412a7c06bf18106b5171c0814369d?raw=1">R
+                        Programming Certification<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://www.udemy.com/certificate/UC-9b519503-7265-43a6-9da4-f756634a48eb/">The Complete
+                        Python Developer Course - ZerotoMastery Academy<img style="width:16px;"
+                            src="Images/maximize.png" alt="link"></a></li>
+                <hr>
+                <h2>Data Science and Analysis Certifications</h2>
+                <li><a
+                        href="https://www.datacamp.com/statement-of-accomplishment/track/30b2f8669a3a747360ae40fac88ee5135fb8757e">Data
+                        Analyst with R Certification<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
+                </li>
+                <li><a href="https://coursera.org/share/739444f60cc5a4449fcaa1d49395c2c3">What is Data Science<img
+                            style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://coursera.org/share/d3d33a2711801d585f73a9f8abaa28ac">Tools for Data Science<img
+                            style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://coursera.org/share/989874dd2748f8efd49f60bae3041916">Data Science Methodology<img
+                            style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/NBZSL465RPYH">Python for Data
+                        Science,AI and development<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
+                </li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/62H6K6TTBE7G">Python Project
+                        for Data Science<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/AM5KKX3E8KPA">Database and SQL
+                        for Data Science with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
+                </li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/N86NPM5UN2WV">Data Analysis
+                        with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/4JJTHNW429VR">Data
+                        Visualisation with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/ROQP7817ORD0">Machine Learning
+                        with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://coursera.org/share/b526cc394c58d9e54033c33fcd1b3e50">Generative AI: Elevate Your
+                        Data Science Career<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://coursera.org/share/d96b1a6ac9fb8ac52fb8087dedad42a0">Data Scientist Career Guide
+                        and Interview Preparation<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
+                <hr>
+                <h2>Astronomy Certifications</h2>
+                <li><a href="https://drive.google.com/file/d/1bAGgQHWw3J-GOiMC0N_eqJcRMFSIC5lx/view?usp=sharing">ISRO
+                        IIRS DLP - Exploring Earth's Moon through Chandrayaan<img style="width:16px;"
+                            src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://drive.google.com/file/d/1aeKzkZgqx22Evbn_FqLqNcL_VGk7ZeRD/view?usp=sharing">ISRO
+                        IIRS DLP - Aditya L1: India's first space based observatory<img style="width:16px;"
+                            src="Images/maximize.png" alt="link"></a></li>
+                <li><a href="https://drive.google.com/file/d/14ijtWEjd9z7NDm6Kvi4O-JdTjqcYEK9o/view?usp=sharing">ISRO
+                        IIRS - Space Science and Technology Awareness Training (START)<img style="width:16px;"
+                            src="Images/maximize.png" alt="link"></a></li>
+
             </ul>
         </div>
         <hr>
         <div id="Projects">
             <h1>Projects</h1>
             <div>
-                <h2>
-                    <a href="https://github.com/ChiragAJain/Terms-and-Condition-Summariser-using-NLP">Stacked Ensemble Learning Model to Classify Potentially Hazardous Near-Earth Asteroids <img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a>
-                </h2>
+                <h2>Comparative Analysis of DL Models for Brain MRI Tumour Detection</h2>
                 <ul>
                     <li>
-                        Developed a novel stacked ensemble model to classify Near-Earth asteroids as Potentially Hazardous Asteroids (PHAs) using physical and orbital attributes, achieving a recall of 99.29% and accuracy of 99.53%, critical for asteroid impact analysis.
+                        Conducted a comparative analysis of Deep Learning models (VGG16, VGG19, Xception, Simple CNN,
+                        EfficientNet-Attn)
+                        by standardizing training conditions with the same optimizer, scheduler, and epochs through
+                        performance evaluation.
                     </li>
                     <li>
-                        The dataset is acquired from NASA’s Jet Propulsion Laboratory Solar System Dynamics’ open datasets, consisting approximately 1.3 million records undergoing data pre-processing before model building.
+                        Processed ~12,000 brain MRI scans from the MRI ND-5 dataset (sourced from IEEE Dataport) through
+                        transformation
+                        pipelines to train deep learning models and generate comparative performance visualizations.
                     </li>
                     <li>
-                        Built a stacked ensemble with Random Forest and XGBoost as base models and Logistic Regression as the meta-model, optimized using GridSearchCV, RFECV, and 15-fold cross-validation.
+                        EfficientNet achieved the highest performance with 99.82% accuracy on the external dataset and
+                        97.45% on the internal
+                        dataset, validated using Nemenyi and Cohen’s d statistical significance tests
                     </li>
                     <li>
-                        Demonstrated the stacked model’s superior recall performance compared to individual base and meta models, underscoring its robustness in asteroid classification; results are currently under review for journal publication.
+                        Research selected for presentation at an upcoming IEEE international conference, with
+                        subsequent publication slated for
+                        a Scopus-indexed journal.
                     </li>
-                    <br>
-                    <a style="font-size:1.25vw" href="https://www.kaggle.com/code/chiragajain/stacked-model-for-pha-classification-of-asteroids"><img style="width:3.5vw;"src="https://www.kaggle.com/static/images/site-logo.svg" alt="link"></a>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/ChiragAJain/EfficientNet-Skin-Cancer-Classification">
+                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="#3D8D7A">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub Repository
+                    </a>
+                </div>
                 </ul>
 
             </div>
             <div>
-                <h2>
-                    <a href="https://github.com/ChiragAJain/Terms-and-Condition-Summariser-using-NLP">Terms and Condition Summariser <img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a>
-                </h2>
+                <h2>Stacked Ensemble Learning Model to Classify Potentially Hazardous Near-Earth Asteroids</h2>
                 <ul>
                     <li>
-                        Designed and implemented a SaaS - Terms and Condition summariser built on pre-trained NLP model(<a style="font-size:1.25vw; display:inline" href="https://huggingface.co/nsi319/legal-pegasus">legal-pegasus</a>) and KeyBert library.
+                        Developed a novel stacked ensemble model to classify Near-Earth asteroids as Potentially
+                        Hazardous Asteroids (PHAs) using physical and orbital attributes, achieving a recall of 99.29%
+                        and accuracy of 99.53%, critical for asteroid impact analysis.
                     </li>
                     <li>
-                        Working: The text is scraped from the files and undergoes segmentation for easier processing via threading. The summariser model takes in each segmented text as input and generates a summary. In addition to that, KeyBert library helps extract keyword from the generated summary for easy understanding. The segemented summaries are then compiled into one and written into a PDF file. The text is displayed on the website along with an option to download it as PDF. A feedback is also available which stores any feedback in a JSON file.
+                        The dataset is acquired from NASA’s Jet Propulsion Laboratory Solar System Dynamics’ open
+                        datasets, consisting approximately 1.3 million records undergoing data pre-processing before
+                        model building.
                     </li>
                     <li>
-                        Built a frontend using HTML, CSS, & JS with flask as backend, where the model model was deployed.
+                        Built a stacked ensemble with Random Forest and XGBoost as base models and Logistic Regression
+                        as the meta-model, optimized using GridSearchCV, RFECV, and 15-fold cross-validation.
+                    </li>
+                    <li>
+                        Demonstrated the stacked model’s superior recall performance compared to individual base and
+                        meta models, underscoring its robustness in asteroid classification; results are currently under
+                        review for journal publication.
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/ChiragAJain/Terms-and-Condition-Summariser-using-NLP">
+                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="#3D8D7A">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub Repository
+                    </a>
+                    <a style="font-size:1.1rem"
+                        href="https://www.kaggle.com/code/chiragajain/stacked-model-for-pha-classification-of-asteroids"><img
+                            style="width:60px;" src="https://www.kaggle.com/static/images/site-logo.svg"
+                            alt="Kaggle"></a>
+                </div>
+                </ul>
+
+            </div>
+            <div>
+                <h2>Terms and Condition Summariser</h2>
+                <ul>
+                    <li>
+                        Designed and implemented a SaaS - Terms and Condition summariser built on pre-trained NLP
+                        model(<a style="font-size:1rem; display:inline"
+                            href="https://huggingface.co/nsi319/legal-pegasus">legal-pegasus</a>) and KeyBert library.
+                    </li>
+                    <li>
+                        Working: The text is scraped from the files and undergoes segmentation for easier processing via
+                        threading. The summariser model takes in each segmented text as input and generates a summary.
+                        In addition to that, KeyBert library helps extract keyword from the generated summary for easy
+                        understanding. The segemented summaries are then compiled into one and written into a PDF file.
+                        The text is displayed on the website along with an option to download it as PDF. A feedback is
+                        also available which stores any feedback in a JSON file.
+                    </li>
+                    <li>
+                        Built a frontend using HTML, CSS, & JS with flask as backend, where the model model was
+                        deployed.
                     </li>
                     <li>
                         Features: Custom Summary length, Flexible file input, Structured PDF Output, Feedback form
                     </li>
                 </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/ChiragAJain/Terms-and-Condition-Summariser-using-NLP">
+                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="#3D8D7A">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub Repository
+                    </a>
+                </div>
             </div>
             <div>
-                <h2><a href="https://github.com/Chirag-65-Jain/Early-Prediction-Of-Chronic-Kidney-Disease-Using-Machine-Learning">Early Prediction of Chronic Kidney Disease using Machine Learning <img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></h2>
+                <h2>Early Prediction of Chronic Kidney Disease using Machine Learning</h2>
                 <ul>
                     <li>
-                        Designed and implemented a predictive learning machine learning model that analysed medical records to identify chronic kidney disease, achieving an accuracy of 93.33% and a recall score of 94.44%.
+                        Designed and implemented a predictive learning machine learning model that analysed medical
+                        records to identify chronic kidney disease, achieving an accuracy of 93.33% and a recall score
+                        of 94.44%.
                     </li>
                     <li>
-                        Four models were considered - Random Forest, Decision Tree, Logistic Regression, and XGBoost. Out of the 4, the overall performance of XGBoost was relatively better than the other 3. 
+                        Four models were considered - Random Forest, Decision Tree, Logistic Regression, and XGBoost.
+                        Out of the 4, the overall performance of XGBoost was relatively better than the other 3.
                     </li>
                     <li>
-                        Trained on a CKD dataset acquired from UC Irvine Machine Learning Repository comprising 400 records and synthetic data generated using Copulas library comprising 200 records.
+                        Trained on a CKD dataset acquired from UC Irvine Machine Learning Repository comprising 400
+                        records and synthetic data generated using Copulas library comprising 200 records.
                     </li>
                     <li>
-                        Deployed the model locally via Flask with a user-friendly web interface scalable for public deployment using PythonAnywhere, enhancing accessibility and potential for broader user engagement.
+                        Deployed the model locally via Flask with a user-friendly web interface scalable for public
+                        deployment using PythonAnywhere, enhancing accessibility and potential for broader user
+                        engagement.
                     </li>
-                    <a style="font-size:1.25vw;" href="https://drive.google.com/file/d/1b6jAaFkeRIsA9jTK2NM105QSeeYsc4dB/view?usp=sharing">Project Report <img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a><br>
-                    <a style="font-size:1.25vw;" href="https://www.kaggle.com/code/chiragajain/prediction-of-chronic-kidney-disease-using-ml"><img style="width:3.5vw;"src="https://www.kaggle.com/static/images/site-logo.svg" alt="link"></a>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/Chirag-65-Jain/Early-Prediction-Of-Chronic-Kidney-Disease-Using-Machine-Learning">
+                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="#3D8D7A">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub Repository
+                    </a>
+                    <a style="font-size:1.1rem;"
+                        href="https://drive.google.com/file/d/1b6jAaFkeRIsA9jTK2NM105QSeeYsc4dB/view?usp=sharing">Project
+                        Report <img style="width:16px;" src="Images/maximize.png" alt="link"></a>
+                    <a style="font-size:1.1rem;"
+                        href="https://www.kaggle.com/code/chiragajain/prediction-of-chronic-kidney-disease-using-ml"><img
+                            style="width:60px;" src="https://www.kaggle.com/static/images/site-logo.svg"
+                            alt="Kaggle"></a>
+                </div>
                 </ul>
                 <div class="iframe-parent">
-                    <iframe  style="margin-left:20vw;" src="https://youtube.com/embed/K3AmvblSkT4">
+                    <iframe src="https://youtube.com/embed/K3AmvblSkT4" title="Chronic Kidney Disease Prediction Demo"
+                        allowfullscreen></iframe>
                     </iframe>
                 </div>
             </div>
             <div style="margin-bottom:2vh;">
-                <h2><a href="https://github.com/Chirag-65-Jain/Chymes">Chymes: A Spotify Playlist Curator <img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a></h2>
+                <h2>Chymes: A Spotify Playlist Curator</h2>
                 <ul>
                     <li>
-                        Developed and designed a playlist curator using Python that creates a Spotify playlist using real-time weather status.
+                        Developed and designed a playlist curator using Python that creates a Spotify playlist using
+                        real-time weather status.
                     </li>
                     <li>
-                        The model utilised Openweathermap API, and Spotify API to gather information and generate a playlist of 30 songs.
+                        The model utilised Openweathermap API, and Spotify API to gather information and generate a
+                        playlist of 30 songs.
                     </li>
                     <li>
-                        Utilised Flask to deploy the webpage, and soon enough a mobile application available on Play Store. Currently, the web application is under Beta testing phase with 5+ users.
+                        Utilised Flask to deploy the webpage, and soon enough a mobile application available on Play
+                        Store. Currently, the web application is under Beta testing phase with 5+ users.
                     </li>
-                    <a style="font-size:1.25vw" href="https://Chymes.pythonanywhere.com/">Website <img style="width:0.8vw;"src="Images/maximize.png" alt="link"></a>
                 </ul>
+                <div class="project-links">
+                    <a class="github-link" href="https://github.com/Chirag-65-Jain/Chymes">
+                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="#3D8D7A">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub Repository
+                    </a>
+                </div>
                 <div class="iframe-parent">
-                    <iframe style="margin-left:20vw;"
-                    src="https://youtube.com/embed/Ygf8jMvDAYA?">
-                </iframe>
+                    <iframe src="https://youtube.com/embed/Ygf8jMvDAYA" title="Chymes Spotify Playlist Curator Demo"
+                        allowfullscreen>
+                    </iframe>
                 </div>
 
             </div>
             <div style="margin-bottom:7vh;">
-                <h2><a href="https://github.com/Chirag-65-Jain/Twitter-X-Sentiment-Analysis">X(formerly Twitter) Sentiment Analysis: COVID-19 Tweets <img style="width:0.7vw;"src="Images/maximize.png" alt="link"></a></h2>
+                <h2>X(formerly Twitter) Sentiment Analysis: COVID-19 Tweets</h2>
                 <ul>
                     <li>
-                        Built a sentiment analysis model using Python that categorised 2021 COVID-19 pandemic tweets into positive, negative, and neutral sentiments.
+                        Built a sentiment analysis model using Python that categorised 2021 COVID-19 pandemic tweets
+                        into positive, negative, and neutral sentiments.
                     </li>
                     <li>
-                        The datasets were acquired from Kaggle and merged to form a single dataset with 2,00,000+ records.Transfer learning was implemented on a pre-trained model, Vader built on Python by C.J. Hutto.
+                        The datasets were acquired from Kaggle and merged to form a single dataset with 2,00,000+
+                        records.Transfer learning was implemented on a pre-trained model, Vader built on Python by C.J.
+                        Hutto.
                     </li>
                     <li>
-                        The tuned model achieved an accuracy of 88% and the results were visualised on a window created using Tkinter library on a daily and monthly basis.
+                        The tuned model achieved an accuracy of 88% and the results were visualised on a window created
+                        using Tkinter library on a daily and monthly basis.
                     </li>
-                    <a style="position:absolute;margin-top:-1vh;font-size:1.25vw" href="https://drive.google.com/file/d/158zb8IqgwP_Am1loxEnuXQdIf6VJe7wX/view?usp=sharing">Project Report <img style="width:0.7vw;" src="Images/maximize.png" alt="link"></a>
                 </ul>
-                
+                <div class="project-links">
+                    <a class="github-link" href="https://github.com/Chirag-65-Jain/Twitter-X-Sentiment-Analysis">
+                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="#3D8D7A">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub Repository
+                    </a>
+                    <a style="font-size:1.1rem"
+                        href="https://drive.google.com/file/d/158zb8IqgwP_Am1loxEnuXQdIf6VJe7wX/view?usp=sharing">Project
+                        Report <img style="width:16px;" src="Images/maximize.png" alt="link"></a>
+                </div>
+
             </div>
         </div>
         <hr>
         <div id="Contact">
             <h1>Contact & Socials</h1>
-            <p>Gmail:</p> <a href="mailto:chiragajain.jain@gmail.com">chiragajain.jain@gmail.com</a><br>
-            <p>LinkedIn:</p> <a href="linkedin.com/in/chiragajain/">linkedin.com/in/chiragajain</a><br>
-            <p>GitHub:</p> <a href="https://github.com/Chirag-65-Jain">github.com/Chirag-65-Jain</a><br>
-            <p>Kaggle:</p> <a href="https://www.kaggle.com/chiragajain">kaggle.com/chiragajain</a><br>
+            <div>
+                <p>Gmail:</p> <a href="mailto:chiragajain.jain@gmail.com">chiragajain.jain@gmail.com</a>
+            </div>
+            <div>
+                <p>LinkedIn:</p> <a href="https://linkedin.com/in/chiragajain/">linkedin.com/in/chiragajain</a>
+            </div>
+            <div>
+                <p>GitHub:</p> <a href="https://github.com/Chirag-65-Jain">github.com/Chirag-65-Jain</a>
+            </div>
+            <div>
+                <p>Kaggle:</p> <a href="https://www.kaggle.com/chiragajain">kaggle.com/chiragajain</a>
+            </div>
         </div>
         <hr>
         <p style="text-align:center;opacity:0.7">© Copyright 2025 | Made by Chirag Jain</p>
-    </div>  
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const navPanel = document.querySelector('.nav-panel');
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+
+            if (!navPanel.contains(event.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Close menu on window resize if it's open
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768) {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger');
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
 </body>
+
 </html>

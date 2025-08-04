@@ -10,9 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav-panel" style="width:10vw;">
-        <div><a href="index.html">Home</a></div>
-        <div><a href="#">Blogs</a></div>
+    <div class="nav-panel">
+        <a href="index.html" class="nav-brand">Chirag Jain</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <div><a href="index.html">Home</a></div>
+            <div><a href="#" onclick="closeMenu()">Blogs</a></div>
+        </div>
     </div>
     <div class="vert-line"></div>
     <div class="content">
@@ -20,8 +28,48 @@
         <div id="Blog-card">
             <strong><p class="Blog-title">AstroPy: Astrophysics using Python</p></strong>
             <p class="Blog-desc"> A beginner's guide to the AstroPy python library, which is used for astronomical computations and data analysis. I have discussed the basic implementation of the package with examples.</p>
-            <a href="Blogs/Astropy.html" style="margin-bottom:2vh;"><button id="Blog-btn"> Read More</button></a>
+            <a href="Blogs/Astropy.html" style="margin-bottom:2vh;text-decoration: none;"><button id="Blog-btn"> Read More</button></a>
         </div>
     </div>
+    
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navPanel = document.querySelector('.nav-panel');
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!navPanel.contains(event.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+        
+        // Close menu on window resize if it's open
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger');
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
