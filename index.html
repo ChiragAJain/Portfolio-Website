@@ -38,12 +38,13 @@
             <img class="profile-img" src="Images/IMG_20230102_173954-modified.png" alt="Chirag_image">
             <h2 class="name-title">Chirag Jain</h2>
             <p>Hi! 👋 I am Chirag</p>
-            <p>A Data Science enthusiasst, and a junior at Vellore Institute of Technology, Amravati, Andhra Pradesh,
+            <p>A Data Science enthusiasst focusing in AI Research and Development, and a Final-year student at Vellore Institute of Technology, Amravati, Andhra Pradesh,
                 India.
-                I am currently pursuing B.Tech in Computer Science and Engineering Core 💻.
             </p>
             <p>
-                ✨General Interests: Astronomy, Cooking, Slice-of-life games
+                <strong>👨‍💻Technical Interests: </strong>Research,Deep Learning, Machine Learning, Python Development, Data Analysis, Database Management
+                <br>
+                <strong>✨General Interests: </strong>Astronomy🌠, Cooking👨‍🍳, Online-Gaming 🎮
             </p>
             <div class="intro-links">
                 <div class="resume-buttons">
@@ -74,13 +75,47 @@
             </div>
         </div>
         <hr>
+        <div id="Experience">
+            <h1>Experience</h1>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <h2>Indian National Science Academy (INSA) Summer Research Fellow</h2>
+                    <p class="Year">May 2025 – Jul. 2025</p>
+                    <p><strong>Technologies:</strong> PyTorch, Computer Vision</p>
+                    <p><strong>Supervisor:</strong> Dr. Ramesh Venkadamchalam (Department of Mathematics, Central
+                        University of Tamil Nadu)</p>
+                    <ul>
+                        <li>
+                            Conducted research on <strong>AI-based disaster damage assessment</strong> using the xView2
+                            dataset comprising <strong>20,000 pre/post-disaster image pairs</strong>,
+                            focusing on building-level classification to support Humanitarian Assistance and Disaster
+                            Relief (HADR) efforts.
+                        </li>
+                        <li>
+                            Designed a <strong>scalable preprocessing pipeline</strong> that extracted building patches,
+                            applied augmentation, and implemented
+                            majority-class undersampling, resulting in a <strong>94.4% dataset expansion</strong> (from
+                            304,370 to 591,583 image patches) and
+                            improved class balance for model training.
+                        </li>
+                        <li>
+                            Developed and optimized a <strong>lightweight CNN</strong> with residual connections (3.7M
+                            parameters, 28.71 MB) achieving <strong>83.3%
+                                accuracy</strong> on 128x128 inputs, closely matching ResNet18's 83.5% (7M parameters,
+                            63.33 MB) with over <strong>54.66%
+                                reduction</strong> in model size, enabling faster inference for field deployment.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div id="Education">
             <h1>Education</h1>
             <div>
                 <h2>Vellore Institute of Technology - Amaravati, Andhra Pradesh</h2>
                 <p class="Year">2022-2026</p>
                 <p>B.Tech of Computer Science and Engineering Core</p>
-                <p>Current CGPA: 9.18</p>
+                <p>Current CGPA: 9.12</p>
             </div>
             <div>
                 <h2>Chennai Public School - Chennai, Tamil Nadu</h2>
@@ -88,6 +123,13 @@
                 <p>Central Board of Secondary Education (CBSE)</p>
                 <p>Senior Secondary</p>
                 <p>Percentage: 92.6%</p>
+            </div>
+            <div>
+                <h2>Chennai Public School - Chennai, Tamil Nadu</h2>
+                <p class="Year">2018-2020</p>
+                <p>Central Board of Secondary Education (CBSE)</p>
+                <p>Secondary</p>
+                <p>Percentage: 95.6%</p>
             </div>
         </div>
         <hr>
@@ -156,6 +198,43 @@
         <hr>
         <div id="Projects">
             <h1>Projects</h1>
+            <div>
+                <h2>Interactive Portfolio Analytics & Risk Assessment Dashboard</h2>
+                <ul>
+                    <li>
+                        Architected a quantitative finance platform to analyse 10 blue-chip equities, implementing a
+                        suite of risk metrics
+                        including Sharpe Ratio optimization, 95% Value-at-Risk, correlation matrices, max drawdown, and
+                        beta coefficients.
+                    </li>
+                    <li>
+                        Deployed a mobile-responsive analytics dashboard using a containerized architecture (Render.com)
+                        and Plotly/Dash,
+                        featuring real-time data visualization and an automated processing pipeline for 500 trading days
+                        of market data via yfinance
+                        API.
+                    </li>
+                    <li>
+                        Implemented an advanced statistical modelling system featuring dynamic risk-free rate
+                        integration (10Y Treasury), Monte
+                        Carlo simulation for risk analysis, and performance attribution across technology, financial,
+                        and healthcare sectors.
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/ChiragAJain/Quantitative-Analysis-and-Risk-Platform">
+                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="#3D8D7A">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub Repository
+                    </a>
+                    <a style="font-size:1.1rem"
+                        href="https://quantitative-analysis-and-risk-platform.onrender.com/">Website <img
+                            style="width:16px;" src="Images/maximize.png" alt="link"></a>
+                </div>
+            </div>
             <div>
                 <h2>Comparative Analysis of DL Models for Brain MRI Tumour Detection</h2>
                 <ul>
