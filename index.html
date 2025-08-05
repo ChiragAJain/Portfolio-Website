@@ -314,26 +314,11 @@
             <div>
                 <h2>Terms and Condition Summariser</h2>
                 <ul>
-                    <li>
-                        Designed and implemented a SaaS - Terms and Condition summariser built on pre-trained NLP
-                        model(<a style="font-size:1rem; display:inline"
-                            href="https://huggingface.co/nsi319/legal-pegasus">legal-pegasus</a>) and KeyBert library.
-                    </li>
-                    <li>
-                        Working: The text is scraped from the files and undergoes segmentation for easier processing via
-                        threading. The summariser model takes in each segmented text as input and generates a summary.
-                        In addition to that, KeyBert library helps extract keyword from the generated summary for easy
-                        understanding. The segemented summaries are then compiled into one and written into a PDF file.
-                        The text is displayed on the website along with an option to download it as PDF. A feedback is
-                        also available which stores any feedback in a JSON file.
-                    </li>
-                    <li>
-                        Built a frontend using HTML, CSS, & JS with flask as backend, where the model model was
-                        deployed.
-                    </li>
-                    <li>
-                        Features: Custom Summary length, Flexible file input, Structured PDF Output, Feedback form
-                    </li>
+                    <li>Designed and implemented a responsive SaaS Terms & Conditions Summarizer with dual-mode architecture: AI-powered analysis using pre-trained NLP model (<a style="font-size:1rem; display:inline" href="https://huggingface.co/nsi319/legal-pegasus">Legal Pegasus</a>) and KeyBERT library for development, plus optimized rule-based NLP for production deployment.</li>
+                    <li>Technical Implementation: Built intelligent document processing pipeline that extracts text from multiple file formats (.pdf, .docx, .txt), performs automated section identification using legal keyword recognition, and applies either neural summarization (AI mode) or rule-based sentence scoring (Lite mode). Enhanced with threading for concurrent processing, professional PDF generation with color-coded formatting, and real-time user feedback collection stored in JSON format.</li>
+                    <li>Developed modern full-stack web application using HTML5, CSS3 (mobile-first responsive design), JavaScript (ES6+ with drag-and-drop functionality), and Flask backend with production deployment on Railway platform featuring optimized build pipeline and health monitoring.</li>
+                    <li>Key Features: Dual-mode processing (AI/Lite), custom summary length controls (50-350 words), multi-format file support with drag-and-drop upload, mobile-responsive interface, structured PDF output with professional formatting, real-time notifications, user feedback system, and production-ready deployment with 99% uptime.</li>
+
                 </ul>
                 <div class="project-links">
                     <a class="github-link"
@@ -344,6 +329,9 @@
                         </svg>
                         GitHub Repository
                     </a>
+                    <a style="font-size:1.1rem"
+                        href="https://terms-and-condition-summariser-using-nlp-production.up.railway.app/">Website <img
+                            style="width:16px;" src="Images/maximize.png" alt="link"></a>
                 </div>
             </div>
             <div>
@@ -519,3 +507,4 @@
 
 
 </html>
+
