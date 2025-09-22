@@ -271,6 +271,10 @@ body {
     background: linear-gradient(135deg, #0077b5, #00a0dc);
 }
 
+.devto-link-intro:hover {
+    background: linear-gradient(135deg, #0a0a0a, #2d2d2d);
+}
+
 /* Tooltip effect for accessibility */
 .social-link:hover::after {
     content: attr(title);
@@ -581,6 +585,42 @@ body {
 }
 
 .github-link:hover svg {
+    transform: scale(1.1);
+}
+
+/* Website Button Styling */
+.website-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #3D8D7A, #A3D1C6);
+    padding: 0.75rem 1.2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(61, 141, 122, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.website-button:hover {
+    background: linear-gradient(135deg, #2d6b5f, #3D8D7A);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(61, 141, 122, 0.4);
+}
+
+.website-button img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.website-button:hover img {
     transform: scale(1.1);
 }
 
