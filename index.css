@@ -1,12 +1,12 @@
-/* Chirag Jain — research folio
+/* Chirag Jain â€” research folio
    Grounded typesetting. No glass, glow, or motion theater. */
 
 :root {
     --paper: #f3efe6;
     --paper-deep: #ebe6db;
     --ink: #141210;
-    --ink-soft: #2c2825; /* body secondary — still high contrast */
-    --ink-faint: #4a4540; /* labels only — not washed out */
+    --ink-soft: #2c2825; /* body secondary â€” still high contrast */
+    --ink-faint: #4a4540; /* labels only â€” not washed out */
     --rule: #cfc8b8;
     --rule-strong: #1c1917;
     --mark: #7c2d12;
@@ -21,11 +21,11 @@
     --sans: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     /* Type scale */
-    --fs-xs: 0.8125rem;   /* 13px — mono labels */
-    --fs-sm: 0.9375rem;   /* 15px — UI / meta */
-    --fs-base: 1.125rem;  /* 18px — body */
-    --fs-md: 1.25rem;     /* 20px — lead */
-    --fs-lg: 1.5rem;      /* 24px — card titles */
+    --fs-xs: 0.8125rem;   /* 13px â€” mono labels */
+    --fs-sm: 0.9375rem;   /* 15px â€” UI / meta */
+    --fs-base: 1.125rem;  /* 18px â€” body */
+    --fs-md: 1.25rem;     /* 20px â€” lead */
+    --fs-lg: 1.5rem;      /* 24px â€” card titles */
     --fs-xl: clamp(2.15rem, 5.5vw, 3rem);
     --fs-section: 0.875rem;
 }
@@ -54,7 +54,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Left bound edge — document, not app chrome */
+/* Left bound edge â€” document, not app chrome */
 body::before {
     content: "";
     position: fixed;
@@ -87,7 +87,7 @@ a:hover {
     color: var(--ink);
 }
 
-/* ========== NAV — solid paper, no blur ========== */
+/* ========== NAV â€” solid paper, no blur ========== */
 
 .nav-panel {
     position: sticky;
@@ -364,7 +364,7 @@ a:hover {
     text-underline-offset: 0.15em;
 }
 
-/* Expand panel in document flow — no overlap with neighbors */
+/* Expand panel in document flow â€” no overlap with neighbors */
 .flash-panel {
     display: grid;
     grid-template-rows: 0fr;
@@ -411,7 +411,7 @@ a:hover {
 }
 
 .flash-panel-inner li::before {
-    content: "▸";
+    content: "\25B8";
     position: absolute;
     left: 0;
     top: 0.12em;
@@ -472,7 +472,7 @@ a:hover {
 }
 
 .page-rail .aside-plain li:not(:last-child)::after {
-    content: "·";
+    content: "\00B7";
     margin-left: 0.65rem;
     color: var(--rule);
     font-weight: 400;
@@ -556,7 +556,7 @@ a:hover {
     margin-bottom: 1.1rem;
 }
 
-/* Signal board — dense highlights, fills empty width */
+/* Signal board â€” dense highlights, fills empty width */
 .signal-board {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -696,7 +696,7 @@ a:hover {
     display: none;
 }
 
-/* ========== ABOUT — split: copy + side rail ========== */
+/* ========== ABOUT â€” split: copy + side rail ========== */
 
 .About-me {
     background: transparent;
@@ -748,7 +748,7 @@ a:hover {
 }
 
 .tag:not(:last-child)::after {
-    content: " · ";
+    content: " \00B7 ";
     color: var(--rule);
 }
 
@@ -869,7 +869,7 @@ a:hover {
 }
 
 .mark-list.mark-tri li::before {
-    content: "▸";
+    content: "\25B8";
     position: absolute;
     left: 0;
     top: 0.1em;
@@ -879,7 +879,7 @@ a:hover {
 }
 
 .mark-list.mark-sq li::before {
-    content: "▪";
+    content: "\25AA";
     position: absolute;
     left: 0.05rem;
     top: 0.15em;
@@ -1081,7 +1081,7 @@ a:hover {
     display: none;
 }
 
-/* ========== ENTRIES — ledger rows, not cards ========== */
+/* ========== ENTRIES â€” ledger rows, not cards ========== */
 
 .experience-container,
 .publication-container,
@@ -1246,7 +1246,7 @@ a.org-link:hover {
 #Work-Experience li::before,
 #Research-Experience li::before,
 #Projects li::before {
-    content: "▸";
+    content: "\25B8";
     position: absolute;
     left: 0;
     top: 0.05em;
@@ -1501,7 +1501,7 @@ a.org-link:hover {
 }
 
 .services-list li::before {
-    content: "◈";
+    content: "\25C8";
     position: absolute;
     left: 0;
     top: 0.8rem;
@@ -1521,7 +1521,7 @@ a.org-link:hover {
     margin: 0;
 }
 
-/* ========== CONTACT — definition list look ========== */
+/* ========== CONTACT â€” definition list look ========== */
 
 #Contact {
     background: transparent;
@@ -1730,7 +1730,7 @@ hr {
 }
 
 .blog-meta .tag:not(:last-child)::after {
-    content: " · ";
+    content: " \00B7 ";
 }
 
 #Blog-btn {
@@ -1849,7 +1849,7 @@ hr {
     font-weight: 600;
 }
 
-/* Code — solid, readable */
+/* Code â€” solid, readable */
 #blog-Content pre,
 pre.code-block,
 #blog-Code,
@@ -2150,5 +2150,538 @@ pre.code-output code,
 
     * {
         transition: none !important;
+    }
+}
+
+
+/* ========== LANDING PAGE ========== */
+
+body.landing-page {
+    min-height: 100vh;
+    background: var(--paper);
+}
+
+body.landing-page::before {
+    /* keep left spine */
+}
+
+body.landing-page .nav-panel {
+    background: transparent;
+    border-bottom: 0;
+}
+
+.lp {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.lp-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem clamp(1.25rem, 4vw, 2.5rem);
+    padding-left: calc(clamp(1.25rem, 4vw, 2.5rem) + 0.25rem);
+}
+
+.lp-nav-brand {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.lp-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.1rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.lp-nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.lp-nav-links a:hover {
+    color: var(--mark);
+    border-bottom-color: var(--mark);
+}
+
+.lp-stage {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+
+.lp-aside {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.75rem clamp(1.25rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.lp-aside-mark {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #e7cfc0;
+}
+
+.lp-aside-roles {
+    font-family: var(--serif);
+    font-size: clamp(1.75rem, 4vw, 2.35rem);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--paper);
+}
+
+.lp-aside-roles span {
+    display: block;
+}
+
+.lp-aside-meta {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #cfc8b8;
+}
+
+.lp-aside-meta strong {
+    color: var(--paper);
+    font-weight: 600;
+}
+
+.lp-main {
+    background: var(--paper);
+    padding: 2rem clamp(1.25rem, 4vw, 2.75rem) 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.75rem;
+}
+
+.lp-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    align-self: flex-start;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--mark);
+    border: 1px solid var(--ink);
+    padding: 0.4rem 0.7rem;
+    background: var(--paper-deep);
+}
+
+.lp-status i {
+    width: 0.45rem;
+    height: 0.45rem;
+    background: var(--mark);
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.lp-headline {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 6.5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    color: var(--ink);
+    max-width: 14ch;
+    margin: 0;
+}
+
+.lp-sub {
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 32rem;
+    margin: 0;
+}
+
+.lp-sub em {
+    font-style: italic;
+    color: var(--mark);
+}
+
+.lp-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.lp-cta-row .btn {
+    padding: 0.7rem 1.15rem;
+    font-size: 0.95rem;
+}
+
+.lp-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--ink);
+    margin-top: 0.25rem;
+}
+
+.lp-metric {
+    padding: 0.95rem 1rem;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+}
+
+.lp-metric:nth-child(2n) {
+    border-right: 0;
+}
+
+.lp-metric:nth-last-child(-n + 2) {
+    border-bottom: 0;
+}
+
+.lp-metric b {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+}
+
+.lp-metric span {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    line-height: 1.35;
+}
+
+.lp-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    align-items: center;
+    padding: 0.9rem clamp(1.25rem, 4vw, 2.5rem);
+    padding-left: calc(clamp(1.25rem, 4vw, 2.5rem) + 0.25rem);
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.lp-foot a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.lp-foot a:hover {
+    color: var(--mark);
+    border-bottom-color: var(--mark);
+}
+
+.lp-foot-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+}
+
+.lp-foot-note {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+}
+
+@media (min-width: 900px) {
+    body.landing-page .nav-panel {
+        display: none; /* custom lp-nav only */
+    }
+
+    .lp-stage {
+        grid-template-columns: minmax(15rem, 28vw) 1fr;
+        min-height: calc(100vh - 7rem);
+    }
+
+    .lp-main {
+        padding: 2.5rem clamp(2rem, 5vw, 4rem);
+        gap: 2rem;
+    }
+
+    .lp-metrics {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 42rem;
+    }
+
+    .lp-metric {
+        border-bottom: 0;
+    }
+
+    .lp-metric:not(:last-child) {
+        border-right: 1px solid var(--rule);
+    }
+
+    .lp-metric:nth-child(2n) {
+        border-right: 1px solid var(--rule);
+    }
+
+    .lp-metric:last-child {
+        border-right: 0;
+    }
+}
+
+@media (max-width: 899px) {
+    .lp-nav {
+        /* use shared nav-panel on mobile instead */
+        display: none;
+    }
+
+    body.landing-page .nav-panel {
+        display: flex;
+        border-bottom: 1px solid var(--ink);
+        background: var(--paper);
+    }
+}
+
+/* ========== HOVER REFINEMENTS ========== */
+
+/* Safer bullets (unicode escapes already set above) */
+#Work-Experience li::before,
+#Research-Experience li::before,
+#Projects li::before,
+.mark-list.mark-tri li::before,
+.flash-panel-inner li::before {
+    content: "\25B8";
+}
+
+.mark-list.mark-sq li::before {
+    content: "\25AA";
+}
+
+.services-list li::before {
+    content: "\25C8";
+}
+
+.tag:not(:last-child)::after,
+.page-rail .aside-plain li:not(:last-child)::after {
+    content: " \00B7 ";
+}
+
+/* Buttons */
+.btn {
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+        transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary:hover {
+    box-shadow: 3px 3px 0 rgba(124, 45, 18, 0.35);
+}
+
+.btn-ghost:hover,
+.btn-outline:hover {
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Nav */
+.nav-menu a {
+    transition: color 0.12s ease, background 0.12s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--mark);
+}
+
+@media (min-width: 768px) {
+    .nav-menu a:hover {
+        background: var(--paper-deep);
+    }
+}
+
+.nav-brand {
+    transition: color 0.12s ease;
+}
+
+/* Cards / list items */
+.experience-item,
+.education-item,
+#Projects > article,
+#Projects > div {
+    transition: border-color 0.15s ease, background 0.15s ease, padding-left 0.15s ease;
+}
+
+.experience-item:hover,
+.education-item:hover,
+#Projects > article:hover,
+#Projects > div:hover {
+    background: var(--paper-deep);
+    border-bottom-color: var(--ink);
+    padding-left: 0.35rem;
+}
+
+/* Org / project links */
+a.org-link,
+.org-site a,
+.github-link,
+.publication-link,
+.report-link,
+.website-button,
+.blog-link,
+.blog-card-actions a {
+    transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.github-link:hover,
+.publication-link:hover,
+.report-link:hover,
+.website-button:hover,
+.blog-link:hover {
+    color: var(--ink);
+}
+
+/* Blog cards */
+.blog-card {
+    transition: background 0.15s ease, padding-left 0.15s ease;
+}
+
+.blog-card:hover {
+    background: var(--paper-deep);
+    padding-left: 0.35rem;
+}
+
+/* Certifications */
+#Certification li a {
+    transition: color 0.12s ease, background 0.12s ease, padding-left 0.12s ease;
+}
+
+#Certification li a:hover {
+    background: var(--paper-deep);
+    padding-left: 0.35rem;
+    color: var(--mark);
+}
+
+/* Contact rows */
+#Contact > div:not(.section-header) {
+    transition: background 0.12s ease;
+}
+
+#Contact > div:not(.section-header):hover {
+    background: var(--paper-deep);
+}
+
+#Contact a {
+    transition: color 0.12s ease;
+}
+
+/* Flash cards */
+.flash-card {
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.flash-card:hover {
+    border-color: var(--mark);
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: translateX(2px);
+}
+
+.flash-card.is-open:hover {
+    transform: none;
+}
+
+.flash-hint {
+    transition: color 0.12s ease;
+}
+
+.flash-card:hover .flash-hint {
+    color: var(--ink);
+}
+
+.hire-rail-cta {
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.hire-rail-cta:hover {
+    transform: translateY(-1px);
+}
+
+/* Right rail links */
+.aside-links a {
+    transition: color 0.12s ease, border-color 0.12s ease, padding-left 0.12s ease;
+}
+
+.aside-links a:hover {
+    padding-left: 0.2rem;
+}
+
+/* Tags */
+.tag {
+    transition: color 0.12s ease;
+}
+
+.tag:hover {
+    color: var(--mark);
+}
+
+/* Landing */
+.lp-nav-links a,
+.lp-foot a {
+    transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.lp-metric {
+    transition: background 0.15s ease;
+}
+
+.lp-metric:hover {
+    background: var(--paper-deep);
+}
+
+.lp-status {
+    transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.lp-cta-row .btn:hover {
+    transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn:hover,
+    .flash-card:hover,
+    .hire-rail-cta:hover,
+    .lp-cta-row .btn:hover {
+        transform: none;
     }
 }
