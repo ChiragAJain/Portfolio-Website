@@ -2685,3 +2685,74 @@ a.org-link,
         transform: none;
     }
 }
+
+
+/* ========== SCROLLBAR (match UI) ========== */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2c2825 #ebe6db;
+}
+
+/* Chromium / Safari / Edge */
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ebe6db;
+    border-left: 1px solid #cfc8b8;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #2c2825;
+    border: 2px solid #ebe6db;
+    border-radius: 0;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #7c2d12;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background: #141210;
+}
+
+*::-webkit-scrollbar-corner {
+    background: #ebe6db;
+}
+
+/* Dark panels (landing aside, open flash cards) */
+.lp-aside,
+.flash-panel,
+.flash-panel-inner {
+    scrollbar-color: #cfc8b8 #141210;
+}
+
+.lp-aside::-webkit-scrollbar-track,
+.flash-panel::-webkit-scrollbar-track,
+.flash-panel-inner::-webkit-scrollbar-track {
+    background: #141210;
+    border-left: 1px solid #2c2825;
+}
+
+.lp-aside::-webkit-scrollbar-thumb,
+.flash-panel::-webkit-scrollbar-thumb,
+.flash-panel-inner::-webkit-scrollbar-thumb {
+    background: #78716c;
+    border: 2px solid #141210;
+}
+
+.lp-aside::-webkit-scrollbar-thumb:hover,
+.flash-panel::-webkit-scrollbar-thumb:hover,
+.flash-panel-inner::-webkit-scrollbar-thumb:hover {
+    background: #e7cfc0;
+}
+
+/* Sticky side rails */
+.hire-rail,
+.page-rail {
+    scrollbar-color: #2c2825 #ebe6db;
+}
