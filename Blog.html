@@ -3,72 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirag Jain|Blogs</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Blog — Chirag Jain</title>
+    <meta name="description" content="Writing by Chirag Jain on agentic AI, manufacturing AI, Python, and building software. Also on Medium and Dev.to.">
+    <link rel="stylesheet" href="index.css?v=20260712k">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,600;1,7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav-panel">
+    <nav class="nav-panel" aria-label="Primary">
         <a href="index.html" class="nav-brand">Chirag Jain</a>
-        <div class="hamburger" onclick="toggleMenu()">
+        <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <div class="nav-menu" id="navMenu">
-            <div><a href="index.html">Home</a></div>
-            <div><a href="#" onclick="closeMenu()">Blogs</a></div>
+            <a href="index.html">Home</a>
+            <a href="index.html#Projects">Projects</a>
+            <a href="#" onclick="closeMenu()">Blog</a>
+            <a href="index.html#Contact">Contact</a>
         </div>
-    </div>
-    <div class="vert-line"></div>
-    <div class="content">
-        <h1 id="Title">BLOGS</h1>
-        <div id="Blog-card">
-            <strong><p class="Blog-title">AstroPy: Astrophysics using Python</p></strong>
-            <p class="Blog-desc"> A beginner's guide to the AstroPy python library, which is used for astronomical computations and data analysis. I have discussed the basic implementation of the package with examples.</p>
-            <a href="Blogs/Astropy.html" style="margin-bottom:2vh;text-decoration: none;"><button id="Blog-btn"> Read More</button></a>
-        </div>
-    </div>
-    
+    </nav>
+
+    <main class="content">
+        <header class="blog-page-header">
+            <h1>Blog</h1>
+            <p>
+                Writing on agentic AI, manufacturing systems, and software I build.
+                Also on
+                <a href="https://medium.com/@chiragajay.jain" target="_blank" rel="noopener noreferrer">Medium</a>
+                and
+                <a href="https://dev.to/chiragajain" target="_blank" rel="noopener noreferrer">Dev.to</a>
+                — newest first.
+            </p>
+            <div class="blog-external-links">
+                <a class="btn btn-ghost" href="https://medium.com/@chiragajay.jain" target="_blank" rel="noopener noreferrer">Medium</a>
+                <a class="btn btn-ghost" href="https://dev.to/chiragajain" target="_blank" rel="noopener noreferrer">Dev.to</a>
+            </div>
+        </header>
+
+        <article class="blog-card">
+            <p class="blog-date">21 Jun 2026 · <span class="blog-platform">Medium</span></p>
+            <div class="blog-meta">
+                <span class="tag">Agentic AI</span>
+                <span class="tag">Manufacturing</span>
+                <span class="tag">RL</span>
+            </div>
+            <p class="Blog-title">Self-Training Agents in Manufacturing: Closing the Gap Between Simulation and Real Production</p>
+            <p class="Blog-desc">
+                Why “deploy and freeze” fails on the plant floor, and how residual learning, safe online
+                adaptation, and sim-to-real techniques let agents keep improving without unacceptable risk.
+            </p>
+            <div class="blog-card-actions">
+                <a href="Blogs/Self-Training-Agents-Manufacturing.html">Read on site →</a>
+                <a href="https://medium.com/@chiragajay.jain/self-training-agents-in-manufacturing-closing-the-gap-between-simulation-and-real-production-12eb02b40a97" target="_blank" rel="noopener noreferrer">Medium ↗</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <p class="blog-date">21 Jun 2026 · <span class="blog-platform">Medium</span></p>
+            <div class="blog-meta">
+                <span class="tag">Agentic AI</span>
+                <span class="tag">Enterprise</span>
+                <span class="tag">LLM</span>
+            </div>
+            <p class="Blog-title">Agentic AI in 2026: From Chatbots to Autonomous Enterprise Workers</p>
+            <p class="Blog-desc">
+                How enterprise AI moved past FAQ bots into agents that plan, reason, and act — and what that
+                shift means for real workflows inside companies.
+            </p>
+            <div class="blog-card-actions">
+                <a href="Blogs/Agentic-AI-2026.html">Read on site →</a>
+                <a href="https://medium.com/@chiragajay.jain/agentic-ai-in-2026-from-chatbots-to-autonomous-enterprise-workers-314dcfa8c383" target="_blank" rel="noopener noreferrer">Medium ↗</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <p class="blog-date">14 Sep 2025 · <span class="blog-platform">Dev.to</span></p>
+            <div class="blog-meta">
+                <span class="tag">Open source</span>
+                <span class="tag">Productivity</span>
+                <span class="tag">Full-stack</span>
+            </div>
+            <p class="Blog-title">How I Built a Full-Stack Productivity Tool for Notion using Kiro</p>
+            <p class="Blog-desc">
+                Building GitDone — a GitHub-integrated deadline tracker with OAuth, embeddable countdowns,
+                and a full AWS delivery path — written up for other builders.
+            </p>
+            <div class="blog-card-actions">
+                <a href="Blogs/GitDone-Kiro.html">Read on site →</a>
+                <a href="https://dev.to/chiragajain/built-a-full-stack-github-integrated-notion-productivity-tool-2jmi" target="_blank" rel="noopener noreferrer">Dev.to ↗</a>
+                <a href="https://github.com/ChiragAJain/Git-Done" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <p class="blog-date">1 Jan 2025 · <span class="blog-platform">Medium</span></p>
+            <div class="blog-meta">
+                <span class="tag">Python</span>
+                <span class="tag">Astronomy</span>
+                <span class="tag">Tutorial</span>
+            </div>
+            <p class="Blog-title">AstroPy: Astrophysics using Python</p>
+            <p class="Blog-desc">
+                Units, celestial coordinates, and FITS files with AstroPy — a short guide with runnable examples.
+            </p>
+            <div class="blog-card-actions">
+                <a href="Blogs/Astropy.html">Read on site →</a>
+                <a href="https://medium.com/@chiragajay.jain/astropy-astrophysics-using-python-chirag-jain-4f59a753511e" target="_blank" rel="noopener noreferrer">Medium ↗</a>
+            </div>
+        </article>
+
+        <p class="site-footer">© 2026 Chirag Jain</p>
+    </main>
+
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger');
-            
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
+            const open = navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
         }
-        
+
         function closeMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger');
-            
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
         }
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+
+        document.addEventListener('click', function (event) {
             const navPanel = document.querySelector('.nav-panel');
             const navMenu = document.getElementById('navMenu');
-            const hamburger = document.querySelector('.hamburger');
-            
             if (!navPanel.contains(event.target) && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
+                closeMenu();
             }
         });
-        
-        // Close menu on window resize if it's open
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768) {
-                const navMenu = document.getElementById('navMenu');
-                const hamburger = document.querySelector('.hamburger');
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            }
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768) closeMenu();
         });
     </script>
 </body>

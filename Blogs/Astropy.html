@@ -3,234 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirag Jain | AstroPy</title>
-    <link rel="stylesheet" href="../index.css">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>AstroPy: Astrophysics using Python — Chirag Jain</title>
+    <meta name="description" content="A beginner's guide to AstroPy for astronomical computations, coordinates, units, and FITS files.">
+    <link rel="stylesheet" href="../index.css?v=20260712h">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,600;1,7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav-panel">
+    <nav class="nav-panel" aria-label="Primary">
         <a href="../index.html" class="nav-brand">Chirag Jain</a>
-        <div class="hamburger" onclick="toggleMenu()">
+        <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <div class="nav-menu" id="navMenu">
-            <div><a href="../index.html">Home</a></div>
-            <div><a href="../Blog.html">Blogs</a></div>
+            <a href="../index.html">Home</a>
+            <a href="../Blog.html">Blog</a>
         </div>
-    </div>
-    <div class="vert-line"></div>
-    <div class="content">
-        <h1 id="blog-Title">AstroPy: Astrophysics using Python </h1>
-        <hr>
-        <div id="blog-Content">
+    </nav>
+
+    <main class="content article-wrap">
+        <a class="back-link" href="../Blog.html">← All posts</a>
+
+        <h1 id="blog-Title">AstroPy: Astrophysics using Python</h1>
+        <div class="article-meta">
+            <span>Python</span>
+            <span>·</span>
+            <span>Astronomy</span>
+            <span>·</span>
+            <span>Tutorial</span>
+        </div>
+
+        <article id="blog-Content">
             <h2>Introduction</h2>
             <p>
-                Astrophysics, one of the most advanced and intriguing fields in science, brings together brilliant minds and high performance computing to transform enormous amount of raw data into human comprehensible information that expands our knowledge about the known Universe. <br>
-                <br> Python, a widely-used, easy-to-understand, language is often used for data science and analytics. It has several libraries that could be beneficial in knowledge discovery in Astrophysics. I will be discussing one such library, called AstroPy.<br>
-                <br> 
-                AstroPy is a community-driven, open-source library that offers a wide range of core functionalities for astronomy. It supports various file formats, including Flexible Image Transport System (FITS) files, Virtual Observatory (VO) tables, common ASCII table formats, and provides tools for handling physical constants, units, celestial coordinates, and time calculations. Getting to know this versatile package is a must for anyone exploring astronomy and astrophysics through Python. Designed to streamline common astronomical tasks, AstroPy ensures standardized data structures for efficient analysis.
-                <br>
-                AstroPy is also widely used in academic and research settings, making it a bridge between coding and real-world astrophysical challenges. Whether you're working with complex datasets or visualizing celestial coordinates, this library empowers researchers to focus on science rather than technicalities.
-                <br>
-                For data science students branching into astrophysics, AstroPy serves as a user-friendly gateway into this fascinating field. Learn more about its extensive features through the <a href="https://docs.astropy.org/en/stable/index.html">AstroPy Documentation</a> or consider joining its active community to contribute.
+                Astrophysics brings together high-performance computing and enormous raw datasets, turning them into
+                information we can reason about. Python is a natural fit for that work: readable, widely used in data
+                science, and backed by libraries built for scientific computing.
             </p>
+            <p>
+                One of those libraries is <strong>AstroPy</strong> — a community-driven, open-source package for core
+                astronomy tasks. It handles FITS files, VO tables, ASCII tables, physical constants, units, celestial
+                coordinates, and time calculations with standardized data structures.
+            </p>
+            <p>
+                Whether you are working with complex datasets or converting celestial coordinates, AstroPy lets you
+                focus on the science rather than reinventing formats and unit logic. For data science students stepping
+                into astronomy, it is a practical starting point. See the
+                <a href="https://docs.astropy.org/en/stable/index.html">AstroPy documentation</a> for the full
+                feature set, or join the community if you want to contribute.
+            </p>
+
             <h2>Installation</h2>
-            <p>You can install AstroPy by inserting the following command in your Python terminal: </p>
-            <div id="blog-Code">
-                <p>python.exe -m pip install astropy</p>
-            </div>
+            <p>Install AstroPy with pip:</p>
+            <pre class="code-block" tabindex="0"><code>python -m pip install astropy</code></pre>
             <p>
-                Make sure you have properly set up your python environment. You can try installing it directly through popular IDEs like PyCharm or VSCode. 
-                <br>                 
+                Make sure your Python environment is set up first. You can also install it from PyCharm, VS Code, or
+                any other IDE that manages packages for you.
             </p>
-            <h2>Getting to Know AstroPy</h2>
+
+            <h2>Units and conversions</h2>
             <p>
-                AstroPy enables seamless unit conversion for various calculations. In this example, I demonstrate how to calculate the speed of light between the Sun and Earth in both light-years per second and kilometers per second, effortlessly converting between units.
+                AstroPy makes unit conversion straightforward. The example below estimates the speed of light between
+                the Sun and Earth during winter solstice, and reports it in both light-years per second and km/s.
             </p>
-            <div id="blog-Code">
-                <p>from astropy import units <br>
-                    <br>
-                    <i>#Calculating speed of light between the Sun and Earth</i> <br>
-                    <i>#during Winter Solstice (December 21)</i> <br>
-                    distanceSE =  147090000 * units.km <br>
-                    distanceSELy = distanceSE.to(units.lightyear) <i>#Converting to LightYear</i> <br>
-                    time = 497 * units.s <i>#Time in Seconds</i> <br>
-                    speed = distanceSELy / time <br>
-                    print("Speed of Light between Sun and Earth (LightYear/Sec) = {:.10f}".format(speed)) <br>
-                    print("Speed of Light between Sun and Earth (Km/Sec) = {:.4f}".format(speed.to(units.km/units.s))) <br></p>
-            </div>
-            <div id="blog-Code">
-                <p><strong>Output:</strong><br>
-                    Speed of Light between Sun and Earth (LightYear/Sec) = 0.0000000313 lyr / s<br>
-                    Speed of Light between Sun and Earth (Km/Sec) = 295955.7344 km / s</p>
-            </div>
+            <pre class="code-block" tabindex="0"><code>from astropy import units
+
+# Winter solstice (approx. Sun–Earth distance)
+distance_se = 147_090_000 * units.km
+distance_se_ly = distance_se.to(units.lightyear)
+time = 497 * units.s
+
+speed = distance_se_ly / time
+print(
+    "Speed of light (ly/s) = {:.10f}".format(speed)
+)
+print(
+    "Speed of light (km/s) = {:.4f}".format(
+        speed.to(units.km / units.s)
+    )
+)</code></pre>
+            <pre class="code-output" tabindex="0"><code>Speed of light (ly/s) = 0.0000000313 lyr / s
+Speed of light (km/s) = 295955.7344 km / s</code></pre>
+
+            <h2>Celestial coordinates</h2>
             <p>
-                AstroPy can also handle astronomical coordinates. In Layman's term, <strong>Right Acension(ra)</strong> is the celestial longitude and <strong>Declination(dec)</strong> is the celestial latitude. <br>
-                The Coordinates module in AstroPy helps in working with the celestial coordinate system.
+                In simple terms, <strong>Right Ascension (RA)</strong> is celestial longitude and
+                <strong>Declination (Dec)</strong> is celestial latitude. AstroPy’s coordinates module works with that
+                system directly:
             </p>
-            <div id="blog-Code">
-                <p>from astropy.coordinates import get_sun <br>
-                from astropy.time import Time <br>
-                my_time = Time.now() <i>#Current Time</i><br>
-                print(get_sun(my_time)) <i>#Coordinates of Sun in Right Acension, Declination, and Distance in AU</i><br>
-                print(get_sun(my_time).to_string(style='hmsdms')) <i>#Coordinates of Sun in Hours-Minute-Second Format</i><br></p>
-            </div>
-            <div id="blog-Code">
-                <p><strong>Output:</strong><br>
-                    SkyCoord (GCRS: obstime=2024-12-28 03:15:20.792177, obsgeoloc=(0., 0., 0.) m, obsgeovel=(0., 0., 0.) m / s): (ra, dec, distance) in (deg, deg, AU)
-                    <br>(277.10557264, -23.27546755, 0.98343585) <br>
-                    18h28m25.33743467s -23d16m31.68318593s <br></p>
-            </div>
-            <p>I have two outputs, one is in the degree format whereas the other is in hmsdms format. hmsdms is a widely used format in the astronomy community, where</p>
-            <table style="border-collapse: collapse; text-align: center; margin: 1rem auto;">
-                <tr>
-                    <th><i>Right Ascension (ra)</i></th>
-                    <th><i>Declination (dec)</i></th>
-                </tr>
-                <tr>
-                    <td><strong>H:</strong> Hours</td>
-                    <td><strong>D:</strong> Degrees</td>
-                </tr>
-                <tr>
-                    <td><strong>M:</strong> Minutes</td>
-                    <td><strong>M:</strong> Minutes</td>
-                </tr>
-                <tr>
-                    <td><strong>S:</strong> Seconds</td>
-                    <td><strong>S:</strong> Seconds</td>
-                </tr>
+            <pre class="code-block" tabindex="0"><code>from astropy.coordinates import get_sun
+from astropy.time import Time
+
+my_time = Time.now()
+print(get_sun(my_time))
+print(get_sun(my_time).to_string(style="hmsdms"))</code></pre>
+            <pre class="code-output" tabindex="0"><code>SkyCoord (GCRS: obstime=2024-12-28 03:15:20.792177,
+          obsgeoloc=(0., 0., 0.) m,
+          obsgeovel=(0., 0., 0.) m / s):
+  (ra, dec, distance) in (deg, deg, AU)
+  (277.10557264, -23.27546755, 0.98343585)
+
+18h28m25.33743467s -23d16m31.68318593s</code></pre>
+            <p>
+                The first form is degrees; the second is the <code>hmsdms</code> format used widely in astronomy:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Right Ascension (RA)</th>
+                        <th>Declination (Dec)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>H — Hours</td>
+                        <td>D — Degrees</td>
+                    </tr>
+                    <tr>
+                        <td>M — Minutes</td>
+                        <td>M — Minutes</td>
+                    </tr>
+                    <tr>
+                        <td>S — Seconds</td>
+                        <td>S — Seconds</td>
+                    </tr>
+                </tbody>
             </table>
-            <br>
-            <p>Hence, the Sun at the time of writing this is located at "18 Hours 28 Minutes 25.33 Seconds" ra and "-23 Degrees 16 Minutes 31.68 Seconds" dec.</p>
             <p>
-                AstroPy is also capable of processing FITS files. Flexible Image Transport System (FITS) are essentially scientific data files composed of multi-dimensional arrays and 2-D tables. They are widely used within astronomy to transport, analyse and archive files. <br>
-                I am using a FITS file that I acquired from a dataset on Kaggle to show how AstroPy can easily process these files and plot it using the Matplotlib package. <br>
+                So at the time of writing, the Sun was at about
+                <code>18h 28m 25.33s</code> RA and <code>−23° 16′ 31.68″</code> Dec.
             </p>
-            <div id="blog-Code">
-                <p>
-                from astropy.io import fits
-                import matplotlib.pyplot as plt
-    
-                hdulist = fits.open("BlogExample.FTZ") <i>#Opening the FITS file</i> <br>
-                hdulist.info() <i>#Printing the meta data of the FITS file</i> <br>
-                data = hdulist[0].data <br>
-                print(data.shape) <i>Printing the shape of the data</i> <br>
-                hdulist.close() <br>
-                <i>#Plotting the data</i> <br>
-                plt.figure(figsize=(8, 8))
-                plt.imshow(data, cmap='gray', origin='lower') <br>
-                plt.colorbar(label='Pixel Intensity') <br>
-                plt.title('FITS Image') <br>
-                plt.xlabel('X Pixels') <br>
-                plt.ylabel('Y Pixels') <br>
-                <i>#Saving the image</i> <br>
-                output_image = 'Image.png' <br>
-                plt.savefig(output_image) <br>
-                plt.show() <br>
-                </p>
-                
-            </div>
-            <div id="blog-Code">
-                <p><strong>Output:</strong><br>
-                    Filename: BlogExample.FTZ
-                </p>
-                <table style="border-collapse: collapse; width: 100%; text-align: left; margin: 1rem 0;">
-                    <tr>
-                        <th>No.</th>
-                        <th>Name</th>
-                        <th>Ver</th>
-                        <th>Type</th>
-                        <th>Cards</th>
-                        <th>Dimensions</th>
-                        <th>Format</th>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>PRIMARY</td>
-                        <td>1</td>
-                        <td>PrimaryHDU</td>
-                        <td>68</td>
-                        <td>(1046, 1079)</td>
-                        <td>float32</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>EXPOSURE</td>
-                        <td>1</td>
-                        <td>ImageHDU</td>
-                        <td>8</td>
-                        <td>(1046, 1079)</td>
-                        <td>float32</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>QUALITY</td>
-                        <td>1</td>
-                        <td>ImageHDU</td>
-                        <td>9</td>
-                        <td>(1046, 1079)</td>
-                        <td>int16</td>
-                    </tr>
-                </table>
-                <p>
-                    (1079, 1046)
-                </p>
-            </div>
-            <img id="blog-Code-Snippets" style="border:solid 2px" src="../Images/Blogs/BlogExampleOutput.PNG" alt="BlogExampleOutput">
-            <p>In the output, we have listed out the meta data of the FITS file and the image of the FITS file. <br></p>
+
+            <h2>Working with FITS files</h2>
+            <p>
+                FITS (Flexible Image Transport System) files are the standard way astronomy stores multi-dimensional
+                arrays and tables. Below, AstroPy opens a FITS file, prints its structure, and plots the primary image
+                with Matplotlib.
+            </p>
+            <pre class="code-block" tabindex="0"><code>from astropy.io import fits
+import matplotlib.pyplot as plt
+
+hdulist = fits.open("BlogExample.FTZ")
+hdulist.info()
+
+data = hdulist[0].data
+print(data.shape)
+hdulist.close()
+
+plt.figure(figsize=(8, 8))
+plt.imshow(data, cmap="gray", origin="lower")
+plt.colorbar(label="Pixel Intensity")
+plt.title("FITS Image")
+plt.xlabel("X Pixels")
+plt.ylabel("Y Pixels")
+plt.savefig("Image.png")
+plt.show()</code></pre>
+            <pre class="code-output" tabindex="0"><code>Filename: BlogExample.FTZ
+No.  Name      Ver    Type      Cards  Dimensions   Format
+0    PRIMARY   1   PrimaryHDU    68   (1046, 1079)  float32
+1    EXPOSURE  1   ImageHDU       8   (1046, 1079)  float32
+2    QUALITY   1   ImageHDU       9   (1046, 1079)  int16
+
+(1079, 1046)</code></pre>
+            <img id="blog-Code-Snippets" src="../Images/Blogs/BlogExampleOutput.PNG" alt="Plotted FITS image from the AstroPy example">
+            <p>
+                The HDU list describes the file structure; the plot is the primary image array rendered in grayscale.
+            </p>
+
             <h2>Conclusion</h2>
             <p>
-                Astropy offers a powerful toolkit to explore the universe computationally. Its flexibility and comprehensiveness make it a valuable resource for data science enthusiasts stepping into astronomy. By mastering its basics, you can unlock countless opportunities for interdisciplinary projects. <br>
-                As a learning data scientist, this could be your stepping stone to discovering how data-driven approaches revolutionize our understanding of the cosmos. Happy exploring!
+                AstroPy is a solid toolkit for computational astronomy: units, coordinates, and FITS handling cover a
+                large share of day-to-day work. If you already know Python for data science, this library is a direct
+                bridge into astrophysics projects.
             </p>
-        </div>
-        <hr>
-        <br>
-        <p style="text-align:center;opacity:0.7">© Copyright 2025 | Made by Chirag Jain</p>
-    </div>
-    
+            <p>
+                Start with the basics above, then dig into the official docs for more specialized modules. Happy
+                exploring.
+            </p>
+        </article>
+
+        <p class="site-footer">© 2026 Chirag Jain</p>
+    </main>
+
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger');
-            
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
+            const open = navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
         }
-        
+
         function closeMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger');
-            
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
         }
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+
+        document.addEventListener('click', function (event) {
             const navPanel = document.querySelector('.nav-panel');
             const navMenu = document.getElementById('navMenu');
-            const hamburger = document.querySelector('.hamburger');
-            
             if (!navPanel.contains(event.target) && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
+                closeMenu();
             }
         });
-        
-        // Close menu on window resize if it's open
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768) {
-                const navMenu = document.getElementById('navMenu');
-                const hamburger = document.querySelector('.hamburger');
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            }
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768) closeMenu();
         });
     </script>
 </body>

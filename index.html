@@ -4,687 +4,943 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirag Jain | Data Science & AI</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Chirag Jain — AI Engineer &amp; Data Scientist</title>
+    <meta name="description"
+        content="AI Engineer & Data Scientist. Production multi-agent systems at Apollo Tyres DIH. INSA research fellow. IEEE-published deep learning. Open to full-time roles.">
+    <link rel="stylesheet" href="index.css?v=20260712m">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zilla+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,600;1,7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <div class="nav-panel">
+    <nav class="nav-panel" aria-label="Primary">
         <a href="#" class="nav-brand">Chirag Jain</a>
-        <div class="hamburger" onclick="toggleMenu()">
+        <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false"
+            aria-controls="navMenu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <div class="nav-menu" id="navMenu">
-            <div><a href="#" onclick="closeMenu()">About Me</a></div>
-            <div><a href="#Education" onclick="closeMenu()">Education</a></div>
-            <div><a href="#Certification" onclick="closeMenu()">Certifications</a></div>
-            <div><a href="#Projects" onclick="closeMenu()">Projects</a></div>
-            <div><a href="#Contact" onclick="closeMenu()">Contact & Socials</a></div>
-            <div><a href="Blog.html">Blogs</a></div>
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#Strengths" onclick="closeMenu()">Why hire</a>
+            <a href="#Work-Experience" onclick="closeMenu()">Experience</a>
+            <a href="#Projects" onclick="closeMenu()">Projects</a>
+            <a href="#Education" onclick="closeMenu()">Education</a>
+            <a href="#Services" onclick="closeMenu()">Services</a>
+            <a href="Blog.html">Blog</a>
+            <a href="#Contact" onclick="closeMenu()">Contact</a>
         </div>
-    </div>
-    <div class="vert-line"></div>
-    <div class="content">
-        <div class="About-me">
-            <h1>PORTFOLIO</h1>
-            <img class="profile-img" src="Images/IMG_20230102_173954-modified.png" alt="Chirag_image">
-            <h2 class="name-title">Chirag Jain</h2>
-            <p>Hi! 👋 I am Chirag</p>
-            <p>I build software to solve problems I have personally encountered. My focus is on leveraging AI and SaaS
-                technologies to develop applications that are accessible, insightful, and designed to make a tangible,
-                positive impact on people's lives.
-            </p>
-            <p>
-                <strong>Technical & Scientific Interests: </strong>Research, Deep Learning, Machine Learning,
-                Python Software Development, Data Science, Database Management, Astronomy
-            </p>
-            <div class="intro-links">
-                <div class="resume-buttons">
-                    <a class="resume"
-                        href="https://drive.google.com/file/d/1wcWFC1k6NdgAp0uo40Xfcp99OVC6fky1/view?usp=sharing">
-                        <button id="resume">Resume</button>
-                    </a>
+    </nav>
+
+    <main class="content page-shell">
+        <!-- Sticky left: Why hire me flash cards -->
+        <aside class="hire-rail" id="Strengths" aria-label="Why hire me">
+            <div class="hire-rail-head">
+                <p class="hire-rail-label">Why hire me</p>
+                <p class="hire-rail-cue">
+                    <span class="hire-cue-dot" aria-hidden="true"></span>
+                    Recruiters — click a card
+                </p>
+            </div>
+            <div class="flash-deck" id="flashDeck">
+                <button type="button" class="flash-card" data-flash aria-expanded="false">
+                    <span class="flash-head">
+                        <span class="flash-num">01</span>
+                        <span class="flash-title">AI Engineer</span>
+                        <span class="flash-hint" data-hint>Click to open →</span>
+                    </span>
+                    <span class="flash-panel">
+                        <span class="flash-panel-inner">
+                            <ul>
+                                <li>Multi-agent systems in production (Apollo · Bedrock)</li>
+                                <li>LLM apps with real fallbacks, not brittle demos</li>
+                                <li>MCP / agent tooling over real APIs (KOSH)</li>
+                                <li>CI/CD + cloud ship path (AWS)</li>
+                            </ul>
+                        </span>
+                    </span>
+                </button>
+                <button type="button" class="flash-card" data-flash aria-expanded="false">
+                    <span class="flash-head">
+                        <span class="flash-num">02</span>
+                        <span class="flash-title">Data Scientist</span>
+                        <span class="flash-hint" data-hint>Click to open →</span>
+                    </span>
+                    <span class="flash-panel">
+                        <span class="flash-panel-inner">
+                            <ul>
+                                <li>Forecasting &amp; CV tied to ops decisions</li>
+                                <li>Evaluation with stats, not vanity scores</li>
+                                <li>Scale data prep (591k patches · 1.3M rows)</li>
+                                <li>Lightweight models for field use</li>
+                            </ul>
+                        </span>
+                    </span>
+                </button>
+                <button type="button" class="flash-card" data-flash aria-expanded="false">
+                    <span class="flash-head">
+                        <span class="flash-num">03</span>
+                        <span class="flash-title">Proof points</span>
+                        <span class="flash-hint" data-hint>Click to open →</span>
+                    </span>
+                    <span class="flash-panel">
+                        <span class="flash-panel-inner">
+                            <ul>
+                                <li>Apollo: multi-agent + ~23s / 36 SEM images</li>
+                                <li>INSA: 83.3% · 54% smaller than ResNet18</li>
+                                <li>IEEE: 99.82% MRI accuracy</li>
+                                <li>PHA: 99.53% acc · 99.29% recall</li>
+                            </ul>
+                        </span>
+                    </span>
+                </button>
+                <button type="button" class="flash-card" data-flash aria-expanded="false">
+                    <span class="flash-head">
+                        <span class="flash-num">04</span>
+                        <span class="flash-title">Leadership</span>
+                        <span class="flash-hint" data-hint>Click to open →</span>
+                    </span>
+                    <span class="flash-panel">
+                        <span class="flash-panel-inner">
+                            <ul>
+                                <li>VP, Women in Open Source (WiOS)</li>
+                                <li>Lead 25+ members · hiring + web</li>
+                                <li>Owns delivery and people work</li>
+                                <li>Best fit: end-to-end AI/ML workstreams</li>
+                            </ul>
+                        </span>
+                    </span>
+                </button>
+            </div>
+            <a class="hire-rail-cta" href="mailto:chiragajay.jain@gmail.com">Email me →</a>
+        </aside>
+
+        <div class="page-main">
+        <header class="hero">
+            <div class="hero-main">
+                <div class="hero-identity">
+                    <img class="profile-img hero-photo" src="Images/IMG_20230102_173954-modified.png" alt="Chirag Jain">
+                    <div>
+                        <p class="hero-kicker">Open to AI Engineer &amp; Data Scientist roles</p>
+                        <h1 class="hero-name">Chirag Jain</h1>
+                        <p class="hero-roles">AI Engineer · Data Scientist · Technical Writer</p>
+                    </div>
                 </div>
-                <div class="social-links">
-                    <a class="social-link github-link-intro" href="https://github.com/ChiragAJain" title="GitHub">
-                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="currentColor">
+                <p class="hero-desc">
+                    I ship <strong>production multi-agent systems</strong> and applied ML — not demos that die in a notebook.
+                    Right now I build agentic orchestration at <strong>Apollo Tyres Digital Innovation Hub</strong>.
+                    Before that: national research fellowship, an IEEE deep-learning paper, and full systems from
+                    data prep through cloud deploy.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://drive.google.com/file/d/1wcWFC1k6NdgAp0uo40Xfcp99OVC6fky1/view?usp=sharing"
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href="#Strengths" class="btn btn-ghost">Why hire me</a>
+                    <a href="#Work-Experience" class="btn btn-outline">Experience</a>
+                    <a href="mailto:chiragajay.jain@gmail.com" class="btn btn-outline">Email</a>
+                </div>
+            </div>
+
+            <dl class="signal-board" aria-label="Highlights">
+                <div class="signal">
+                    <dt>Industry</dt>
+                    <dd>Apollo Tyres · multi-agent AI in production</dd>
+                </div>
+                <div class="signal">
+                    <dt>Research</dt>
+                    <dd>INSA Fellow · 83.3% · 54% smaller model</dd>
+                </div>
+                <div class="signal">
+                    <dt>Published</dt>
+                    <dd>IEEE · MRI DL · 99.82% accuracy</dd>
+                </div>
+                <div class="signal">
+                    <dt>Academics</dt>
+                    <dd>VIT-AP CSE · CGPA 9.2 · AWS SAA</dd>
+                </div>
+            </dl>
+        </header>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>About</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="About-me">
+                <div class="about-copy">
+                    <p>
+                        I take models out of notebooks and into systems people actually use — multi-agent workflows,
+                        CV pipelines, forecasting for ops decisions — then I measure whether they hold up.
+                    </p>
+                    <p>
+                        My work spans the full loop: framing the problem, building the data path, training and
+                        evaluating models, productizing agents and LLMs, and shipping on the cloud. I also write
+                        about that work, because I want teams to see how I think, not only what I shipped.
+                    </p>
+                    <p>
+                        <strong>Core stack:</strong>
+                        <span class="about-meta inline-meta">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">AWS Bedrock</span>
+                            <span class="tag">Multi-Agent Systems</span>
+                            <span class="tag">LLMOps</span>
+                            <span class="tag">RAG / MCP</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Forecasting</span>
+                            <span class="tag">Snowflake</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section id="Work-Experience" class="section">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-container">
+                <article class="experience-item">
+                    <h2>
+                        <a class="org-link" href="https://www.apollotyres.com/" target="_blank" rel="noopener noreferrer">Apollo Tyres LTD</a>
+                        Digital Innovation Hub
+                    </h2>
+                    <h3>Data Science Intern</h3>
+                    <p class="Year">Jan 2026 – Present</p>
+                    <p class="location"><strong>Location:</strong> Hyderabad · Hybrid</p>
+                    <p class="org-site">
+                        <a href="https://www.apollotyres.com/" target="_blank" rel="noopener noreferrer">apollotyres.com ↗</a>
+                    </p>
+                    <p><strong>Stack:</strong> Python, PyTorch, AWS Bedrock, Amazon Redshift, Multi-Agent Systems, CV,
+                        Forecasting, LLMOps</p>
+                    <ul>
+                        <li>
+                            Led development of a <strong>production multi-agentic AI orchestration system</strong> on
+                            AWS Bedrock and Redshift, delivering real-time operational insights and decision support
+                            across manufacturing processes.
+                        </li>
+                        <li>
+                            Engineered a <strong>high-throughput SEM image preprocessing pipeline</strong> and MVP
+                            platform capable of processing <strong>36-image batches in ~23 seconds</strong>, improving
+                            reliability of downstream impurity analysis workflows for R&amp;D.
+                        </li>
+                        <li>
+                            Designed <strong>adaptive energy demand forecasting models</strong> for plant-level power
+                            bidding optimization using historical data to support cost reduction and operational
+                            planning.
+                        </li>
+                        <li>
+                            Evaluated <strong>10+ enterprise AI platforms and agentic architectures</strong> to inform
+                            manufacturing-focused AI solution selection and roadmap.
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Research -->
+        <section id="Research-Experience" class="section">
+            <div class="section-header">
+                <h2>Research</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-container">
+                <article class="experience-item">
+                    <h2>
+                        <a class="org-link" href="https://insaindia.res.in/" target="_blank" rel="noopener noreferrer">Indian National Science Academy (INSA)</a>
+                        Summer Research Fellow
+                    </h2>
+                    <p class="Year">May 2025 – Jul 2025</p>
+                    <p class="org-site">
+                        <a href="https://insaindia.res.in/" target="_blank" rel="noopener noreferrer">insaindia.res.in ↗</a>
+                    </p>
+                    <p><strong>Stack:</strong> PyTorch, Computer Vision</p>
+                    <p><strong>Supervisor:</strong> Dr. Ramesh Venkadamchalam (Dept. of Mathematics,
+                        <a class="org-link" href="https://cutn.ac.in/" target="_blank" rel="noopener noreferrer">Central University of Tamil Nadu</a>)</p>
+                    <ul>
+                        <li>
+                            Research on <strong>AI-based disaster damage assessment</strong> using the xView2 dataset
+                            (<strong>20,000 pre/post-disaster image pairs</strong>), focusing on building-level
+                            classification for HADR efforts.
+                        </li>
+                        <li>
+                            Built a <strong>scalable preprocessing pipeline</strong> (patch extraction, augmentation,
+                            majority-class undersampling) with a <strong>94.4% dataset expansion</strong>
+                            (304,370 → 591,583 patches) and improved class balance.
+                        </li>
+                        <li>
+                            Developed a <strong>lightweight residual CNN</strong> (3.7M params, 28.71 MB) at
+                            <strong>83.3% accuracy</strong> — matching ResNet18 (83.5%, 7M params) with
+                            <strong>54.66% smaller</strong> model size for field deployment.
+                        </li>
+                    </ul>
+                    <div class="project-links">
+                        <a class="github-link"
+                            href="https://github.com/ChiragAJain/IASc-INSA-NASI-Fellowship-25-Assessing-Post-Disaster-Building-Damages"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <article class="experience-item">
+                    <h2>Comparative Analysis of DL Models for Brain MRI Tumour Detection</h2>
+                    <p class="Year">IEEE Publication</p>
+                    <p><strong>Stack:</strong> PyTorch, Computer Vision</p>
+                    <p><strong>Supervisor:</strong> Dr. Deepasikha Mishra (SCOPE,
+                        <a class="org-link" href="https://vitap.ac.in/" target="_blank" rel="noopener noreferrer">VIT-AP University</a>)</p>
+                    <ul>
+                        <li>
+                            Comparative study of VGG16, VGG19, Xception, Simple CNN, and EfficientNet-Attn under
+                            standardized training conditions.
+                        </li>
+                        <li>
+                            Processed ~12,000 brain MRI scans from the MRI ND-5 dataset (IEEE Dataport) through
+                            transformation pipelines with comparative performance visualizations.
+                        </li>
+                        <li>
+                            EfficientNet hit <strong>99.82%</strong> accuracy (external) and <strong>97.45%</strong>
+                            (internal), validated with Nemenyi and Cohen's d tests.
+                        </li>
+                        <li>
+                            Presented at an IEEE international conference; published in the Scopus-indexed IEEE Digital
+                            Library.
+                        </li>
+                    </ul>
+                    <div class="project-links">
+                        <a class="github-link"
+                            href="https://github.com/ChiragAJain/Comparative-Analysis-of-Deep-Learning-Models-to-Detect-Brain-Tumour-through-MRI-Scans"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a class="publication-link" href="https://ieeexplore.ieee.org/document/11203463" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                            </svg>
+                            IEEE Paper
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="Projects" class="section">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <article>
+                <h2>KOSH: Open Government Data MCP Server</h2>
+                <h3>University Capstone · Group</h3>
+                <ul>
+                    <li>
+                        Conversational interface for <a href="https://data.gov.in" target="_blank"
+                            rel="noopener noreferrer">India’s Open Government Data</a> — query complex public datasets
+                        and generate dynamic visualizations via natural language.
+                    </li>
+                    <li>
+                        Specialized <strong>Model Context Protocol (MCP)</strong> server (Python + FastMCP) wrapping
+                        25+ government APIs — a standardized interoperability layer for AI agents.
+                    </li>
+                    <li>
+                        Built with Gemini 2.5 Pro for reasoning, a Node.js/Express agent backend, and a React
+                        frontend with streaming responses and automated chart rendering.
+                    </li>
+                    <li>
+                        Built in-chat visualisation UI and backend tools for 8+ APIs to fetch, filter, and render public
+                        datasets dynamically.
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link" href="https://github.com/the-data-gateway-initiative/" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
                         </svg>
+                        GitHub
                     </a>
-                    <a class="social-link linkedin-link-intro" href="https://linkedin.com/in/chiragajain/"
-                        title="LinkedIn">
-                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
-                        </svg>
-                    </a>
-                    <a class="social-link devto-link-intro" href="https://dev.to/chiragajain" title="Dev.to Blog">
-                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z" />
-                        </svg>
-                    </a>
+                </div>
+            </article>
 
+            <article>
+                <h2>GenAI Legal Assistant</h2>
+                <h3>GenAI SaaS · Full-stack (demo retired)</h3>
+                <ul>
+                    <li>Responsive SaaS app to analyze and summarize complex legal documents.</li>
+                    <li>Document pipeline for .pdf, .docx, .txt with automated section identification via legal keyword
+                        recognition.</li>
+                    <li>Dual-mode architecture: primary Gemini API mode + fallback “Lite” mode (Legal Pegasus +
+                        KeyBERT).</li>
+                    <li>CI/CD and cloud deploy (Railway / Cloud Run path); drag-and-drop uploads, summary controls,
+                        PDF export — hosted demo no longer live; code on GitHub.</li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/ChiragAJain/Terms-and-Condition-Summariser-using-NLP" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub
+                    </a>
                 </div>
+            </article>
+
+            <article>
+                <h2>GitDone: GitHub-Integrated Deadline Tracker</h2>
+                <ul>
+                    <li>
+                        Open-source tool with GitHub OAuth2 so developers can create and manage deadline countdowns for
+                        repositories.
+                    </li>
+                    <li>
+                        4-endpoint REST API with embeddable real-time countdown widgets (CORS-ready for Notion and
+                        similar tools).
+                    </li>
+                    <li>
+                        Deployed with CI/CD via AWS CodePipeline → Elastic Beanstalk and CloudFront (custom domain,
+                        SSL); held <strong>99.5% uptime</strong> while live.
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link" href="https://github.com/ChiragAJain/Git-Done" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                <div class="iframe-parent">
+                    <iframe
+                        src="https://www.youtube.com/embed/iK-R61g4Vng"
+                        title="GitDone Demonstration"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+                <p class="video-fallback">
+                    <a href="https://www.youtube.com/watch?v=iK-R61g4Vng" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+                </p>
+            </article>
+
+            <article>
+                <h2>Portfolio Analytics &amp; Risk Assessment Dashboard</h2>
+                <ul>
+                    <li>
+                        Quantitative finance platform for 10 blue-chip equities: Sharpe optimization, 95% VaR,
+                        correlation matrices, max drawdown, beta.
+                    </li>
+                    <li>
+                        Containerized Plotly/Dash dashboard with real-time viz and automated processing of 500 trading
+                        days via yfinance.
+                    </li>
+                    <li>
+                        Dynamic risk-free rate (10Y Treasury), Monte Carlo risk analysis, and sector performance
+                        attribution.
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link" href="https://github.com/ChiragAJain/Quantitative-Analysis-and-Risk-Platform"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a class="website-button" href="https://quantitative-analysis-and-risk-platform.onrender.com/"
+                        target="_blank" rel="noopener noreferrer">Live <img src="Images/maximize.png" alt=""></a>
+                </div>
+            </article>
+
+            <article>
+                <h2>Stacked Ensemble for Hazardous Near-Earth Asteroids</h2>
+                <ul>
+                    <li>
+                        Stacked ensemble classifying NEAs as PHAs — <strong>99.29% recall</strong>,
+                        <strong>99.53% accuracy</strong> on physical and orbital attributes.
+                    </li>
+                    <li>
+                        ~1.3M records from NASA JPL Solar System Dynamics; Random Forest + XGBoost base with Logistic
+                        Regression meta-model (GridSearchCV, RFECV, 15-fold CV).
+                    </li>
+                    <li>
+                        Results under review for journal publication.
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/ChiragAJain/Hybrid-Model-to-Classify-Potentially-Hazardous-Near-Earth-Asteroids"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.kaggle.com/code/chiragajain/stacked-model-for-pha-classification-of-asteroids"
+                        target="_blank" rel="noopener noreferrer">
+                        <img style="width:60px;" src="https://www.kaggle.com/static/images/site-logo.svg" alt="Kaggle">
+                    </a>
+                </div>
+            </article>
+
+            <article>
+                <h2>Early Prediction of Chronic Kidney Disease</h2>
+                <ul>
+                    <li>
+                        Predictive models on medical records — <strong>93.33% accuracy</strong>, <strong>94.44%
+                            recall</strong> with XGBoost outperforming RF, DT, and Logistic Regression.
+                    </li>
+                    <li>
+                        UCI CKD dataset (400 records) + 200 synthetic records via Copulas; Flask web UI for local
+                        deployment.
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link"
+                        href="https://github.com/Chirag-65-Jain/Early-Prediction-Of-Chronic-Kidney-Disease-Using-Machine-Learning"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a class="report-link"
+                        href="https://drive.google.com/file/d/1b6jAaFkeRIsA9jTK2NM105QSeeYsc4dB/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                        </svg>
+                        Report
+                    </a>
+                    <a href="https://www.kaggle.com/code/chiragajain/prediction-of-chronic-kidney-disease-using-ml"
+                        target="_blank" rel="noopener noreferrer">
+                        <img style="width:60px;" src="https://www.kaggle.com/static/images/site-logo.svg" alt="Kaggle">
+                    </a>
+                </div>
+                <div class="iframe-parent">
+                    <iframe
+                        src="https://www.youtube.com/embed/K3AmvblSkT4"
+                        title="CKD Prediction Demo"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+                <p class="video-fallback">
+                    <a href="https://www.youtube.com/watch?v=K3AmvblSkT4" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+                </p>
+            </article>
+
+            <article>
+                <h2>Chymes: Spotify Playlist Curator</h2>
+                <ul>
+                    <li>Python playlist curator driven by real-time weather (OpenWeatherMap + Spotify APIs).</li>
+                    <li>Flask web app generating 30-song playlists; beta with 5+ users.</li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link" href="https://github.com/Chirag-65-Jain/Chymes" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                <div class="iframe-parent">
+                    <iframe
+                        src="https://www.youtube.com/embed/Ygf8jMvDAYA"
+                        title="Chymes Demo"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+                <p class="video-fallback">
+                    <a href="https://www.youtube.com/watch?v=Ygf8jMvDAYA" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+                </p>
+            </article>
+
+            <article>
+                <h2>COVID-19 Tweet Sentiment Analysis</h2>
+                <ul>
+                    <li>
+                        Sentiment model categorizing 2021 pandemic tweets (positive / negative / neutral) on 200k+
+                        merged Kaggle records.
+                    </li>
+                    <li>
+                        Transfer learning on VADER; 88% accuracy with Tkinter visualizations (daily &amp; monthly).
+                    </li>
+                </ul>
+                <div class="project-links">
+                    <a class="github-link" href="https://github.com/Chirag-65-Jain/Twitter-X-Sentiment-Analysis"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a class="report-link"
+                        href="https://drive.google.com/file/d/158zb8IqgwP_Am1loxEnuXQdIf6VJe7wX/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                        </svg>
+                        Report
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Education -->
+        <section id="Education" class="section">
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="section-line"></div>
             </div>
-        </div>
-        <hr>
-        <div id="Work-Experience">
-            <h1>Work Experience</h1>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <h2>Apollo Tyres LTD Digital Innovation Hub</h2>
-                    <em><h3>Data Science Intern</h3></em>
-                    <p class="Year">Jan. 2026 – Present</p>
-                    <p class="location"><strong>Location:</strong> Hyderabad - Hybrid</p>
-                    <p><strong>Technologies:</strong> Python, PyTorch, AWS Bedrock, Amazon Redshift, Multi-Agentic AI Systems, Computer Vision, Forecasting Models, LLMOps</p>
-                    <ul>
-                        <li>
-                            Led development of a <strong>production multi-agentic AI orchestration system</strong> on AWS Bedrock and Redshift, delivering real-time operational insights and decision support across manufacturing processes.
-                        </li>
-                        <li>
-                            Engineered a <strong>high-throughput SEM image preprocessing pipeline</strong> and MVP platform capable of processing <strong>36-image batches in ~23 seconds</strong>, improving reliability of downstream impurity analysis workflows for R&D.
-                        </li>
-                        <li>
-                            Designed <strong>adaptive energy demand forecasting models</strong> for plant-level power bidding optimization using historical data to support cost reduction and operational planning initiatives.
-                        </li>
-                        <li>
-                            Evaluated <strong>10+ enterprise AI platforms and agentic architectures</strong> to inform manufacturing-focused AI solution selection and roadmap.
-                        </li>
-                    </ul>
-                    <div class="project-links">
-                        <a class="blog-link" href="#">
-                            <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                            </svg>
-                            Weekly Progress Blogs (Updating Soon)
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="Research-Experience">
-            <h1>Research Experience</h1>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <h2>Indian National Science Academy (INSA) Summer Research Fellow</h2>
-                    <p class="Year">May 2025 – Jul. 2025</p>
-                    <p><strong>Technologies:</strong> PyTorch, Computer Vision</p>
-                    <p><strong>Supervisor:</strong> Dr. Ramesh Venkadamchalam (Department of Mathematics, Central
-                        University of Tamil Nadu)</p>
-                    <ul>
-                        <li>
-                            Conducted research on <strong>AI-based disaster damage assessment</strong> using the xView2
-                            dataset comprising <strong>20,000 pre/post-disaster image pairs</strong>,
-                            focusing on building-level classification to support Humanitarian Assistance and Disaster
-                            Relief (HADR) efforts.
-                        </li>
-                        <li>
-                            Designed a <strong>scalable preprocessing pipeline</strong> that extracted building patches,
-                            applied augmentation, and implemented
-                            majority-class undersampling, resulting in a <strong>94.4% dataset expansion</strong> (from
-                            304,370 to 591,583 image patches) and
-                            improved class balance for model training.
-                        </li>
-                        <li>
-                            Developed and optimized a <strong>lightweight CNN</strong> with residual connections (3.7M
-                            parameters, 28.71 MB) achieving <strong>83.3%
-                                accuracy</strong> on 128x128 inputs, closely matching ResNet18's 83.5% (7M parameters,
-                            63.33 MB) with over <strong>54.66%
-                                reduction</strong> in model size, enabling faster inference for field deployment.
-                        </li>
-                    </ul>
-                    <div class="project-links">
-                        <a class="github-link"
-                            href="https://github.com/ChiragAJain/IASc-INSA-NASI-Fellowship-25-Assessing-Post-Disaster-Building-Damages">
-                            <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                            </svg>
-                            GitHub Repository
-                        </a>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <h2>Comparative Analysis of DL Models for Brain MRI Tumour Detection</h2>
-                    <p class="Year">Publication</p>
-                    <p><strong>Technologies:</strong> PyTorch, Computer Vision</p>
-                    <p><strong>Supervisor:</strong> Dr. Deepasikha Mishra (School of Computer Science and Engineering,
-                        VIT-AP University)</p>
-                    <ul>
-                        <li>
-                            Conducted a comparative analysis of Deep Learning models (VGG16, VGG19, Xception, Simple CNN,
-                            EfficientNet-Attn)
-                            by standardizing training conditions with the same optimizer, scheduler, and epochs through
-                            performance evaluation.
-                        </li>
-                        <li>
-                            Processed ~12,000 brain MRI scans from the MRI ND-5 dataset (sourced from IEEE Dataport) through
-                            transformation
-                            pipelines to train deep learning models and generate comparative performance visualizations.
-                        </li>
-                        <li>
-                            EfficientNet achieved the highest performance with 99.82% accuracy on the external dataset and
-                            97.45% on the internal
-                            dataset, validated using Nemenyi and Cohen's d statistical significance tests
-                        </li>
-                        <li>
-                            Research selected for presentation at an IEEE international conference, with
-                            subsequent publication slated for
-                            Scopus-indexed IEEE Digital Library.
-                        </li>
-                    </ul>
-                    <div class="project-links">
-                        <a class="github-link"
-                            href="https://github.com/ChiragAJain/Comparative-Analysis-of-Deep-Learning-Models-to-Detect-Brain-Tumour-through-MRI-Scans">
-                            <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                            </svg>
-                            GitHub Repository
-                        </a>
-                        <a class="publication-link" href="https://ieeexplore.ieee.org/document/11203463">
-                            <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                            </svg>
-                            Publication Link
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="Education">
-            <h1>Education</h1>
             <div class="education-container">
                 <div class="education-item">
-                    <h2>Vellore Institute of Technology - Amaravati, Andhra Pradesh</h2>
-                    <p class="Year">2022-2026</p>
-                    <p>B.Tech of Computer Science and Engineering Core</p>
-                    <p>Current CGPA: 9.12</p>
+                    <h2>
+                        <a class="org-link" href="https://vitap.ac.in/" target="_blank" rel="noopener noreferrer">Vellore Institute of Technology — Amaravati, AP</a>
+                    </h2>
+                    <p class="Year">2022 – 2026</p>
+                    <p>B.Tech Computer Science and Engineering (Core)</p>
+                    <p>CGPA: 9.2</p>
+                    <p class="org-site">
+                        <a href="https://vitap.ac.in/" target="_blank" rel="noopener noreferrer">vitap.ac.in ↗</a>
+                    </p>
                 </div>
                 <div class="education-item">
-                    <h2>Chennai Public School - Chennai, Tamil Nadu</h2>
-                    <p class="Year">2020-2022</p>
-                    <p>Central Board of Secondary Education (CBSE)</p>
-                    <p>Senior Secondary</p>
-                    <p>Percentage: 92.6%</p>
+                    <h2>
+                        <a class="org-link" href="https://www.chennaipublicschool.com/" target="_blank" rel="noopener noreferrer">Chennai Public School — Chennai, TN</a>
+                    </h2>
+                    <p class="Year">2020 – 2022</p>
+                    <p>CBSE Senior Secondary · 92.6%</p>
+                    <p class="org-site">
+                        <a href="https://www.chennaipublicschool.com/" target="_blank" rel="noopener noreferrer">chennaipublicschool.com ↗</a>
+                    </p>
                 </div>
                 <div class="education-item">
-                    <h2>Chennai Public School - Chennai, Tamil Nadu</h2>
-                    <p class="Year">2018-2020</p>
-                    <p>Central Board of Secondary Education (CBSE)</p>
-                    <p>Secondary</p>
-                    <p>Percentage: 95.6%</p>
+                    <h2>
+                        <a class="org-link" href="https://www.chennaipublicschool.com/" target="_blank" rel="noopener noreferrer">Chennai Public School — Chennai, TN</a>
+                    </h2>
+                    <p class="Year">2018 – 2020</p>
+                    <p>CBSE Secondary · 95.6%</p>
+                    <p class="org-site">
+                        <a href="https://www.chennaipublicschool.com/" target="_blank" rel="noopener noreferrer">chennaipublicschool.com ↗</a>
+                    </p>
                 </div>
             </div>
-        </div>
-        <hr>
-        <div id="Certification">
-            <h1>Certifications</h1>
+        </section>
+
+        <!-- Certifications -->
+        <section id="Certification" class="section">
+            <div class="section-header">
+                <h2>Certifications</h2>
+                <div class="section-line"></div>
+            </div>
             <ul>
-                <h2>Professional Certifications</h2>
-                <li><a
-                        href="https://cp.certmetrics.com/amazon/en/public/verify/credential/2e40fde9b797442485729be9475e04ed">AWS
-                        Solution Architect Associate (SAA-C03)<img style="width:16px;" src="Images/maximize.png"
-                            alt="link"></a></li>
-                <li><a href="https://coursera.org/share/3381fa8eec34937cfe44af7ffa21ed71">IBM Professional Data Science
-                        Certification<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/track/ccaf998f887960bb70bd6176a62cc09f188b8f5a?raw=1">Associate
-                        Data Engineer in Snowflake<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <hr>
-                <h2>Fundamental Certifications</h2>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/track/0a4298b7916412a7c06bf18106b5171c0814369d?raw=1">R
-                        Programming Certification<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.udemy.com/certificate/UC-9b519503-7265-43a6-9da4-f756634a48eb/">The Complete
-                        Python Developer Course - ZerotoMastery Academy<img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/1db6afdc2aa7a5657e2ac50ab0b2be7624ec4a09?raw=1">Introduction to PowerBI<img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/0a333efcb53061859b3c194c139b5800b954a37a?raw=1">Introduction to DAX in PowerBI<img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/e49f38d5e81ac78b81884694865ccb45f18e6790?raw=1">Introduction to Snowflake <img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                
-                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/9e252f48db6b85e254c3a2379cc29bf19430bb38?raw=1">Introduction to Snowflake SQL <img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                
-                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/611d96ea22969474c2cc43e4e179f0259e668588?raw=1">Introduction to Data Modelling in Snowflake <img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                <hr>
-                <h2>Data Science and Analysis Certifications</h2> 
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/course/44eae0eb169af07ef416c7b0450d94a4ec54307d?raw=1">Fully Automated MLOps
-<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/course/0ee37bd3bdfa3b373cbe3fb6debc5ada2e5cc8e6?raw=1">Monitoring Machine Learning Concepts
-<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/course/9c421143e4d980843c6c0a05b9ee85bc095c08bf?raw=1">Data Manipulation in Snowflake
-<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/course/6528687178ade3ec86a8f9c1dcdb688befc51123?raw=1">Data Preparation in PowerBI
-<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/course/9073179335e568845739f891bc4fa8e9774db9eb?raw=1">Database Design
-<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/course/b968fe7a4f30a7419d07fe32ccde70809cbba5f0?raw=1">Data Visualization in PowerBI
-<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a
-                        href="https://www.datacamp.com/statement-of-accomplishment/track/30b2f8669a3a747360ae40fac88ee5135fb8757e">Data
-                        Analyst with R Certification<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a href="https://coursera.org/share/739444f60cc5a4449fcaa1d49395c2c3">What is Data Science<img
-                            style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/d3d33a2711801d585f73a9f8abaa28ac">Tools for Data Science<img
-                            style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/989874dd2748f8efd49f60bae3041916">Data Science Methodology<img
-                            style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/NBZSL465RPYH">Python for Data
-                        Science,AI and development<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/62H6K6TTBE7G">Python Project
-                        for Data Science<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/AM5KKX3E8KPA">Database and SQL
-                        for Data Science with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a>
-                </li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/N86NPM5UN2WV">Data Analysis
-                        with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/4JJTHNW429VR">Data
-                        Visualisation with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/ROQP7817ORD0">Machine Learning
-                        with Python<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/b526cc394c58d9e54033c33fcd1b3e50">Generative AI: Elevate Your
-                        Data Science Career<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://coursera.org/share/d96b1a6ac9fb8ac52fb8087dedad42a0">Data Scientist Career Guide
-                        and Interview Preparation<img style="width:16px;" src="Images/maximize.png" alt="link"></a></li>
-                <hr>
-                <h2>Astronomy Certifications</h2>
-                <li><a href="https://drive.google.com/file/d/1bAGgQHWw3J-GOiMC0N_eqJcRMFSIC5lx/view?usp=sharing">ISRO
-                        IIRS DLP - Exploring Earth's Moon through Chandrayaan<img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://drive.google.com/file/d/1aeKzkZgqx22Evbn_FqLqNcL_VGk7ZeRD/view?usp=sharing">ISRO
-                        IIRS DLP - Aditya L1: India's first space based observatory<img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
-                <li><a href="https://drive.google.com/file/d/14ijtWEjd9z7NDm6Kvi4O-JdTjqcYEK9o/view?usp=sharing">ISRO
-                        IIRS - Space Science and Technology Awareness Training (START)<img style="width:16px;"
-                            src="Images/maximize.png" alt="link"></a></li>
+                <h2>Professional</h2>
+                <li><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/2e40fde9b797442485729be9475e04ed"
+                        target="_blank" rel="noopener noreferrer">AWS Solutions Architect Associate (SAA-C03)<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://coursera.org/share/3381fa8eec34937cfe44af7ffa21ed71" target="_blank"
+                        rel="noopener noreferrer">IBM Professional Data Science Certification<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/track/ccaf998f887960bb70bd6176a62cc09f188b8f5a?raw=1"
+                        target="_blank" rel="noopener noreferrer">Associate Data Engineer in Snowflake<img
+                            src="Images/maximize.png" alt=""></a></li>
 
+                <h2>Fundamentals</h2>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/track/0a4298b7916412a7c06bf18106b5171c0814369d?raw=1"
+                        target="_blank" rel="noopener noreferrer">R Programming Certification<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.udemy.com/certificate/UC-9b519503-7265-43a6-9da4-f756634a48eb/" target="_blank"
+                        rel="noopener noreferrer">The Complete Python Developer — ZerotoMastery<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/1db6afdc2aa7a5657e2ac50ab0b2be7624ec4a09?raw=1"
+                        target="_blank" rel="noopener noreferrer">Introduction to PowerBI<img src="Images/maximize.png"
+                            alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/0a333efcb53061859b3c194c139b5800b954a37a?raw=1"
+                        target="_blank" rel="noopener noreferrer">Introduction to DAX in PowerBI<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/e49f38d5e81ac78b81884694865ccb45f18e6790?raw=1"
+                        target="_blank" rel="noopener noreferrer">Introduction to Snowflake<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/9e252f48db6b85e254c3a2379cc29bf19430bb38?raw=1"
+                        target="_blank" rel="noopener noreferrer">Introduction to Snowflake SQL<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/611d96ea22969474c2cc43e4e179f0259e668588?raw=1"
+                        target="_blank" rel="noopener noreferrer">Introduction to Data Modelling in Snowflake<img
+                            src="Images/maximize.png" alt=""></a></li>
+
+                <h2>Data Science &amp; MLOps</h2>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/44eae0eb169af07ef416c7b0450d94a4ec54307d?raw=1"
+                        target="_blank" rel="noopener noreferrer">Fully Automated MLOps<img src="Images/maximize.png"
+                            alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/0ee37bd3bdfa3b373cbe3fb6debc5ada2e5cc8e6?raw=1"
+                        target="_blank" rel="noopener noreferrer">Monitoring Machine Learning Concepts<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/9c421143e4d980843c6c0a05b9ee85bc095c08bf?raw=1"
+                        target="_blank" rel="noopener noreferrer">Data Manipulation in Snowflake<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/6528687178ade3ec86a8f9c1dcdb688befc51123?raw=1"
+                        target="_blank" rel="noopener noreferrer">Data Preparation in PowerBI<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/9073179335e568845739f891bc4fa8e9774db9eb?raw=1"
+                        target="_blank" rel="noopener noreferrer">Database Design<img src="Images/maximize.png"
+                            alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/b968fe7a4f30a7419d07fe32ccde70809cbba5f0?raw=1"
+                        target="_blank" rel="noopener noreferrer">Data Visualization in PowerBI<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.datacamp.com/statement-of-accomplishment/track/30b2f8669a3a747360ae40fac88ee5135fb8757e"
+                        target="_blank" rel="noopener noreferrer">Data Analyst with R Certification<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://coursera.org/share/739444f60cc5a4449fcaa1d49395c2c3" target="_blank"
+                        rel="noopener noreferrer">What is Data Science<img src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://coursera.org/share/d3d33a2711801d585f73a9f8abaa28ac" target="_blank"
+                        rel="noopener noreferrer">Tools for Data Science<img src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://coursera.org/share/989874dd2748f8efd49f60bae3041916" target="_blank"
+                        rel="noopener noreferrer">Data Science Methodology<img src="Images/maximize.png" alt=""></a>
+                </li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/NBZSL465RPYH" target="_blank"
+                        rel="noopener noreferrer">Python for Data Science, AI and Development<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/62H6K6TTBE7G" target="_blank"
+                        rel="noopener noreferrer">Python Project for Data Science<img src="Images/maximize.png"
+                            alt=""></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/AM5KKX3E8KPA" target="_blank"
+                        rel="noopener noreferrer">Database and SQL for Data Science with Python<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/N86NPM5UN2WV" target="_blank"
+                        rel="noopener noreferrer">Data Analysis with Python<img src="Images/maximize.png" alt=""></a>
+                </li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/4JJTHNW429VR" target="_blank"
+                        rel="noopener noreferrer">Data Visualisation with Python<img src="Images/maximize.png"
+                            alt=""></a></li>
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/ROQP7817ORD0" target="_blank"
+                        rel="noopener noreferrer">Machine Learning with Python<img src="Images/maximize.png"
+                            alt=""></a></li>
+                <li><a href="https://coursera.org/share/b526cc394c58d9e54033c33fcd1b3e50" target="_blank"
+                        rel="noopener noreferrer">Generative AI: Elevate Your Data Science Career<img
+                            src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://coursera.org/share/d96b1a6ac9fb8ac52fb8087dedad42a0" target="_blank"
+                        rel="noopener noreferrer">Data Scientist Career Guide and Interview Preparation<img
+                            src="Images/maximize.png" alt=""></a></li>
+
+                <h2>Astronomy</h2>
+                <li><a href="https://drive.google.com/file/d/1bAGgQHWw3J-GOiMC0N_eqJcRMFSIC5lx/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">ISRO IIRS DLP — Exploring Earth's Moon through
+                        Chandrayaan<img src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://drive.google.com/file/d/1aeKzkZgqx22Evbn_FqLqNcL_VGk7ZeRD/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">ISRO IIRS DLP — Aditya L1: India's first space-based
+                        observatory<img src="Images/maximize.png" alt=""></a></li>
+                <li><a href="https://drive.google.com/file/d/14ijtWEjd9z7NDm6Kvi4O-JdTjqcYEK9o/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">ISRO IIRS — Space Science and Technology Awareness
+                        Training (START)<img src="Images/maximize.png" alt=""></a></li>
             </ul>
-        </div>
-        <hr>
-        <div id="Projects">
-            <h1>Projects</h1>
-            <div>
-                <h2>KOSH: Open Government Data MCP Server</h2>
-                <em><h3>University Capstone Project - Group</h3></em>
-                <ul>
-                    <li>
-                        Developed Kosh, a conversational interface for <a href="data.gov.in">India’s Open Government Data</a> that allows users to query complex public datasets and generate instant, dynamic visualizations using natural language, reducing time-to-insight from minutes to seconds .
-                    </li>
-                    <li>
-                        Engineered a specialized Model Context Protocol (MCP) server using Python and FastMCP to wrap 25+ government APIs, solving the N X M integration bottleneck and creating a standardized interoperability layer for AI agents.
-                    </li>
-                    <li>
-                        Built a robust full-stack solution leveraging Google Gemini 2.5 Pro for advanced reasoning, Node.js/Express for the agent backend, and React.js for the frontend, featuring real-time response streaming and automated chart rendering.
-                    </li>
-                    <li>
-                        Contributed towards the development of Kosh React UI with a custom in-chat visualisation feature and engineered specialised backend tools to integrate 8+ government APIs, enabling the system to fetch, filter, and render complex public datasets dynamically.
-                    </li>
-                </ul>
-                <div class="project-links">
-                    <a class="github-link"
-                        href="https://github.com/the-data-gateway-initiative/">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                </div>
+        </section>
 
+        <!-- Services / Fiverr gig -->
+        <section id="Services" class="section">
+            <div class="section-header">
+                <h2>Services</h2>
+                <div class="section-line"></div>
             </div>
-            <div>
-                <h2>GenAI Legal Assistant (Recently Revamped)</h2>
-                <ul>
-                    <li>Designed and developed a responsive, full-stack SaaS application to analyze and summarize
-                        complex legal documents, serving as a "GenAI Legal Assistant."</li>
-                    <li>Built an intelligent document processing pipeline that ingests multiple file formats (.pdf,
-                        .docx, .txt), extracts text, and performs automated section identification using legal keyword
-                        recognition.</li>
-                    <li>Engineered a resilient, dual-mode architecture for analysis, featuring a primary mode powered by
-                        the Gemini API and a fallback "Lite" mode using a fine-tuned Legal Pegasus model and KeyBERT for
-                        continued operation.</li>
-                    <li>Automated the end-to-end software delivery lifecycle by establishing a CI/CD pipeline, deploying
-                        a scalable and monitored solution to a production environment on the Railway platform.</li>
-                    <li>Delivered a rich user experience with features including drag-and-drop file uploads, custom
-                        summary length controls, and the ability to export the structured analysis as a professionally
-                        formatted PDF.</li>
+            <article class="services-block">
+                <p class="services-label">Fiverr gig · Hire me</p>
+                <h2 class="services-title">Production multi-agent AI systems &amp; automation</h2>
+                <p class="services-lead">
+                    I take on freelance work building production AI systems — multi-agent orchestration,
+                    RAG pipelines, forecasting, and computer vision — from architecture through deployable delivery.
+                </p>
+                <ul class="services-list">
+                    <li>
+                        <strong>Multi-agent AI systems</strong> — agent design, tool use, orchestration, and
+                        production workflows (including AWS Bedrock-style stacks).
+                    </li>
+                    <li>
+                        <strong>RAG &amp; LLM applications</strong> — retrieval pipelines, grounded Q&amp;A,
+                        document intelligence, and MCP-style tool integrations.
+                    </li>
+                    <li>
+                        <strong>Time-series forecasting</strong> — demand, energy, and operational forecasting
+                        models for planning and automation.
+                    </li>
+                    <li>
+                        <strong>Computer vision solutions</strong> — image pipelines, classification, and
+                        inspection-style workflows for real data.
+                    </li>
+                    <li>
+                        <strong>AI automation</strong> — end-to-end automation that connects models to business
+                        processes, APIs, and monitoring.
+                    </li>
+                </ul>
+                <p class="services-cta-row">
+                    <a class="btn btn-primary"
+                        href="https://www.fiverr.com/chirag_a_jain/build-production-multi-agent-ai-systems-and-automation-solutions"
+                        target="_blank" rel="noopener noreferrer">View gig on Fiverr</a>
+                    <a class="btn btn-ghost" href="mailto:chiragajay.jain@gmail.com">Email about a project</a>
+                </p>
+            </article>
+        </section>
 
-                </ul>
-                <div class="project-links">
-                    <a class="github-link"
-                        href="https://github.com/ChiragAJain/Terms-and-Condition-Summariser-using-NLP">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                    <a class="website-button"
-                        href="https://terms-and-condition-summariser-using-nlp-738031275503.asia-south1.run.app/">Website
-                        <img src="Images/maximize.png" alt="link"></a>
-                </div>
+        <!-- Contact -->
+        <section id="Contact" class="section">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="section-line"></div>
             </div>
             <div>
-                <h2>GitDone: A GitHub-Integrated Deadline tracker</h2>
-                <ul>
-                    <li>
-                        Deployed an open-source tool that uses GitHub OAuth2 for secure user sign-in, allowing
-                        developers to create and manage deadline
-                        countdowns for their repositories.
-                    </li>
-                    <li>
-                        Constructed a 4-endpoint REST API to provide users with a unique embed link for a real-time
-                        countdown widget, enabling seamless
-                        integration into applications like Notion by configuring appropriate CORS header.
-                    </li>
-                    <li>
-                        Automated the software delivery lifecycle by engineering a CI/CD pipeline with AWS CodePipeline
-                        for deployments to AWS Elastic
-                        Beanstalk. Fortified security and performance by implementing Amazon CloudFront as a CDN to
-                        handle custom domain routing,
-                        SSL certificate termination, and cached asset delivery with a 99.5% uptime
-                    </li>
-                </ul>
-                <div class="project-links">
-                    <a class="github-link" href="https://github.com/ChiragAJain/Git-Done">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                    <a class="website-button" href="https://gitdone.online">Website <img src="Images/maximize.png"
-                            alt="link"></a>
-                </div>
-                <div class="iframe-parent">
-                    <iframe src="https://www.youtube.com/embed/iK-R61g4Vng?si=NGvGGp15fhFUv4Kr"
-                        title="GitDone Demonstration" allowfullscreen></iframe>
-                    </iframe>
-                </div>
+                <p>Email</p>
+                <a href="mailto:chiragajay.jain@gmail.com">chiragajay.jain@gmail.com</a>
             </div>
             <div>
-                <h2>Interactive Portfolio Analytics & Risk Assessment Dashboard</h2>
-                <ul>
-                    <li>
-                        Architected a quantitative finance platform to analyse 10 blue-chip equities, implementing a
-                        suite of risk metrics
-                        including Sharpe Ratio optimization, 95% Value-at-Risk, correlation matrices, max drawdown, and
-                        beta coefficients.
-                    </li>
-                    <li>
-                        Deployed a mobile-responsive analytics dashboard using a containerized architecture (Render.com)
-                        and Plotly/Dash,
-                        featuring real-time data visualization and an automated processing pipeline for 500 trading days
-                        of market data via yfinance
-                        API.
-                    </li>
-                    <li>
-                        Implemented an advanced statistical modelling system featuring dynamic risk-free rate
-                        integration (10Y Treasury), Monte
-                        Carlo simulation for risk analysis, and performance attribution across technology, financial,
-                        and healthcare sectors.
-                    </li>
-                </ul>
-                <div class="project-links">
-                    <a class="github-link"
-                        href="https://github.com/ChiragAJain/Quantitative-Analysis-and-Risk-Platform">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                    <a class="website-button"
-                        href="https://quantitative-analysis-and-risk-platform.onrender.com/">Website <img
-                            src="Images/maximize.png" alt="link"></a>
-                </div>
+                <p>LinkedIn</p>
+                <a href="https://www.linkedin.com/in/chiragajain/" target="_blank"
+                    rel="noopener noreferrer">linkedin.com/in/chiragajain</a>
             </div>
             <div>
-                <h2>Stacked Ensemble Learning Model to Classify Potentially Hazardous Near-Earth Asteroids</h2>
-                <ul>
-                    <li>
-                        Developed a novel stacked ensemble model to classify Near-Earth asteroids as Potentially
-                        Hazardous Asteroids (PHAs) using physical and orbital attributes, achieving a recall of 99.29%
-                        and accuracy of 99.53%, critical for asteroid impact analysis.
-                    </li>
-                    <li>
-                        The dataset is acquired from NASA’s Jet Propulsion Laboratory Solar System Dynamics’ open
-                        datasets, consisting approximately 1.3 million records undergoing data pre-processing before
-                        model building.
-                    </li>
-                    <li>
-                        Built a stacked ensemble with Random Forest and XGBoost as base models and Logistic Regression
-                        as the meta-model, optimized using GridSearchCV, RFECV, and 15-fold cross-validation.
-                    </li>
-                    <li>
-                        Demonstrated the stacked model’s superior recall performance compared to individual base and
-                        meta models, underscoring its robustness in asteroid classification; results are currently under
-                        review for journal publication.
-                    </li>
-                </ul>
-                <div class="project-links">
-                    <a class="github-link"
-                        href="https://github.com/ChiragAJain/Hybrid-Model-to-Classify-Potentially-Hazardous-Near-Earth-Asteroids">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                    <a style="font-size:1.1rem"
-                        href="https://www.kaggle.com/code/chiragajain/stacked-model-for-pha-classification-of-asteroids"><img
-                            style="width:60px;" src="https://www.kaggle.com/static/images/site-logo.svg"
-                            alt="Kaggle"></a>
-                </div>
-                </ul>
+                <p>GitHub</p>
+                <a href="https://github.com/ChiragAJain" target="_blank"
+                    rel="noopener noreferrer">github.com/ChiragAJain</a>
+            </div>
+            <div>
+                <p>Kaggle</p>
+                <a href="https://www.kaggle.com/chiragajain" target="_blank"
+                    rel="noopener noreferrer">kaggle.com/chiragajain</a>
+            </div>
+            <div>
+                <p>Medium</p>
+                <a href="https://medium.com/@chiragajay.jain" target="_blank"
+                    rel="noopener noreferrer">medium.com/@chiragajay.jain</a>
+            </div>
+            <div>
+                <p>Dev.to</p>
+                <a href="https://dev.to/chiragajain" target="_blank"
+                    rel="noopener noreferrer">dev.to/chiragajain</a>
+            </div>
+            <div>
+                <p>Services</p>
+                <a href="#Services">Fiverr gig — multi-agent AI &amp; automation →</a>
+            </div>
+            <div>
+                <p>Blog</p>
+                <a href="Blog.html">Writing &amp; notes →</a>
+            </div>
+        </section>
 
-            </div>
-            <div>
-                <h2>Early Prediction of Chronic Kidney Disease using Machine Learning</h2>
-                <ul>
-                    <li>
-                        Designed and implemented a predictive learning machine learning model that analysed medical
-                        records to identify chronic kidney disease, achieving an accuracy of 93.33% and a recall score
-                        of 94.44%.
-                    </li>
-                    <li>
-                        Four models were considered - Random Forest, Decision Tree, Logistic Regression, and XGBoost.
-                        Out of the 4, the overall performance of XGBoost was relatively better than the other 3.
-                    </li>
-                    <li>
-                        Trained on a CKD dataset acquired from UC Irvine Machine Learning Repository comprising 400
-                        records and synthetic data generated using Copulas library comprising 200 records.
-                    </li>
-                    <li>
-                        Deployed the model locally via Flask with a user-friendly web interface scalable for public
-                        deployment using PythonAnywhere, enhancing accessibility and potential for broader user
-                        engagement.
-                    </li>
-                </ul>
-                <div class="project-links">
-                    <a class="github-link"
-                        href="https://github.com/Chirag-65-Jain/Early-Prediction-Of-Chronic-Kidney-Disease-Using-Machine-Learning">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                    <a class="report-link"
-                        href="https://drive.google.com/file/d/1b6jAaFkeRIsA9jTK2NM105QSeeYsc4dB/view?usp=sharing">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                        </svg>
-                        Project Report
-                    </a>
-                    <a style="font-size:1.1rem;"
-                        href="https://www.kaggle.com/code/chiragajain/prediction-of-chronic-kidney-disease-using-ml"><img
-                            style="width:60px;" src="https://www.kaggle.com/static/images/site-logo.svg"
-                            alt="Kaggle"></a>
-                </div>
-                </ul>
-                <div class="iframe-parent">
-                    <iframe src="https://youtube.com/embed/K3AmvblSkT4" title="Chronic Kidney Disease Prediction Demo"
-                        allowfullscreen></iframe>
-                    </iframe>
-                </div>
-            </div>
-            <div style="margin-bottom:2vh;">
-                <h2>Chymes: A Spotify Playlist Curator</h2>
-                <ul>
-                    <li>
-                        Developed and designed a playlist curator using Python that creates a Spotify playlist using
-                        real-time weather status.
-                    </li>
-                    <li>
-                        The model utilised Openweathermap API, and Spotify API to gather information and generate a
-                        playlist of 30 songs.
-                    </li>
-                    <li>
-                        Utilised Flask to deploy the webpage, and soon enough a mobile application available on Play
-                        Store. Currently, the web application is under Beta testing phase with 5+ users.
-                    </li>
-                </ul>
-                <div class="project-links">
-                    <a class="github-link" href="https://github.com/Chirag-65-Jain/Chymes">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                </div>
-                <div class="iframe-parent">
-                    <iframe src="https://youtube.com/embed/Ygf8jMvDAYA" title="Chymes Spotify Playlist Curator Demo"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+        <p class="site-footer">© 2026 Chirag Jain</p>
+        </div><!-- /.page-main -->
 
-            </div>
-            <div style="margin-bottom:7vh;">
-                <h2>X(formerly Twitter) Sentiment Analysis: COVID-19 Tweets</h2>
-                <ul>
-                    <li>
-                        Built a sentiment analysis model using Python that categorised 2021 COVID-19 pandemic tweets
-                        into positive, negative, and neutral sentiments.
-                    </li>
-                    <li>
-                        The datasets were acquired from Kaggle and merged to form a single dataset with 2,00,000+
-                        records.Transfer learning was implemented on a pre-trained model, Vader built on Python by C.J.
-                        Hutto.
-                    </li>
-                    <li>
-                        The tuned model achieved an accuracy of 88% and the results were visualised on a window created
-                        using Tkinter library on a daily and monthly basis.
-                    </li>
+        <aside class="page-rail" aria-label="Links and credentials">
+            <div class="page-rail-inner">
+                <p class="aside-label">Elsewhere</p>
+                <ul class="aside-links">
+                    <li><a href="https://github.com/ChiragAJain" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/chiragajain/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://medium.com/@chiragajay.jain" target="_blank" rel="noopener noreferrer">Medium</a></li>
+                    <li><a href="https://dev.to/chiragajain" target="_blank" rel="noopener noreferrer">Dev.to</a></li>
+                    <li><a href="https://www.kaggle.com/chiragajain" target="_blank" rel="noopener noreferrer">Kaggle</a></li>
+                    <li><a href="#Services">Fiverr gig</a></li>
                 </ul>
-                <div class="project-links">
-                    <a class="github-link" href="https://github.com/Chirag-65-Jain/Twitter-X-Sentiment-Analysis">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                        GitHub Repository
-                    </a>
-                    <a class="report-link"
-                        href="https://drive.google.com/file/d/158zb8IqgwP_Am1loxEnuXQdIf6VJe7wX/view?usp=sharing">
-                        <svg style="width:20px; height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                        </svg>
-                        Project Report
-                    </a>
-                </div>
-
+                <p class="aside-label">Credentials</p>
+                <ul class="aside-links aside-plain">
+                    <li>AWS SAA-C03</li>
+                    <li>IEEE publication</li>
+                    <li>INSA research fellow</li>
+                </ul>
+                <p class="aside-label">Organisations</p>
+                <ul class="aside-links">
+                    <li><a href="https://vitap.ac.in/" target="_blank" rel="noopener noreferrer">VIT-AP</a></li>
+                    <li><a href="https://www.chennaipublicschool.com/" target="_blank" rel="noopener noreferrer">Chennai Public School</a></li>
+                    <li><a href="https://www.apollotyres.com/" target="_blank" rel="noopener noreferrer">Apollo Tyres</a></li>
+                    <li><a href="https://insaindia.res.in/" target="_blank" rel="noopener noreferrer">INSA</a></li>
+                    <li><a href="https://cutn.ac.in/" target="_blank" rel="noopener noreferrer">CUTN</a></li>
+                    <li><a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer">IEEE</a></li>
+                    <li><a href="https://wiosc.github.io/wios-website/" target="_blank" rel="noopener noreferrer">WiOS</a></li>
+                </ul>
             </div>
-        </div>
-        <hr>
-        <div id="Contact">
-            <h1>Contact & Socials</h1>
-            <div>
-                <p>Gmail:</p> <a href="mailto:chiragajay.jain@gmail.com">chiragajay.jain@gmail.com</a>
-            </div>
-            <div>
-                <p>LinkedIn:</p> <a href="https://www.linkedin.com/in/chiragajain/">linkedin.com/in/chiragajain</a>
-            </div>
-            <div>
-                <p>GitHub:</p> <a href="https://github.com/ChiragAJain">github.com/ChiragAJain</a>
-            </div>
-            <div>
-                <p>Kaggle:</p> <a href="https://www.kaggle.com/chiragajain">kaggle.com/chiragajain</a>
-            </div>
-        </div>
-        <hr>
-        <p style="text-align:center;opacity:0.7">© Copyright 2026 | Made by Chirag Jain</p>
-    </div>
+        </aside>
+    </main>
 
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger');
-
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
+            const open = navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
         }
 
         function closeMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger');
-
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
         }
 
-        // Close menu when clicking outside
         document.addEventListener('click', function (event) {
             const navPanel = document.querySelector('.nav-panel');
             const navMenu = document.getElementById('navMenu');
-            const hamburger = document.querySelector('.hamburger');
-
             if (!navPanel.contains(event.target) && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
+                closeMenu();
             }
         });
 
-        // Close menu on window resize if it's open
         window.addEventListener('resize', function () {
-            if (window.innerWidth >= 768) {
-                const navMenu = document.getElementById('navMenu');
-                const hamburger = document.querySelector('.hamburger');
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            }
+            if (window.innerWidth >= 768) closeMenu();
+        });
+
+        // Why-hire flash cards: expand panel; detail slides in from the right (reads as left motion)
+        document.querySelectorAll('[data-flash]').forEach(function (card) {
+            const hint = card.querySelector('[data-hint]');
+            card.addEventListener('click', function () {
+                const willOpen = !card.classList.contains('is-open');
+                document.querySelectorAll('[data-flash]').forEach(function (other) {
+                    other.classList.remove('is-open');
+                    other.setAttribute('aria-expanded', 'false');
+                    const h = other.querySelector('[data-hint]');
+                    if (h) h.textContent = 'Click to open →';
+                });
+                if (willOpen) {
+                    card.classList.add('is-open');
+                    card.setAttribute('aria-expanded', 'true');
+                    if (hint) hint.textContent = 'Click to close ←';
+                }
+            });
         });
     </script>
 </body>
-
 
 </html>

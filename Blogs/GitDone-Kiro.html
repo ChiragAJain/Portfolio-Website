@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>How I Built a Full-Stack Productivity Tool for Notion using Kiro — Chirag Jain</title>
+    <meta name="description" content="As a student developer, I'm surrounded by deadlines. At times, it becomes hard to keep track and...">
+    <link rel="stylesheet" href="../index.css?v=20260712j">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,600;1,7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      #blog-Content img { max-width: 100%; height: auto; border: 1px solid var(--ink); margin: 1rem 0; }
+      #blog-Content pre { white-space: pre-wrap; word-break: break-word; font-family: var(--mono); font-size: 0.84rem; background: var(--code-bg); color: var(--code-fg); padding: 1rem 1.1rem; border: 1px solid var(--ink); margin: 1.25rem 0; overflow-x: auto; }
+      #blog-Content ol, #blog-Content ul { margin: 0.75rem 0 1rem 1.25rem; color: var(--ink); }
+      #blog-Content li { margin: 0.35rem 0; line-height: 1.65; }
+      #blog-Content blockquote { border-left: 3px solid var(--ink); margin: 1rem 0; padding: 0.35rem 0 0.35rem 1rem; color: var(--ink); font-style: italic; }
+      .source-note { font-family: var(--sans); font-size: var(--fs-sm); margin: 0 0 1.25rem; color: var(--ink-soft); }
+      .source-note a { font-weight: 700; color: var(--mark); }
+    </style>
+</head>
+<body>
+    <nav class="nav-panel" aria-label="Primary">
+        <a href="../index.html" class="nav-brand">Chirag Jain</a>
+        <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html">Home</a>
+            <a href="../Blog.html">Blog</a>
+        </div>
+    </nav>
+
+    <main class="content article-wrap">
+        <a class="back-link" href="../Blog.html">← All posts</a>
+        <h1 id="blog-Title">How I Built a Full-Stack Productivity Tool for Notion using Kiro</h1>
+        <div class="article-meta">
+            <span>Open source</span>
+            <span>·</span>
+            <span>Productivity</span>
+            <span>·</span>
+            <span>Full-stack</span>
+        </div>
+        <p class="source-note">Originally published on <a href="https://dev.to/chiragajain/built-a-full-stack-github-integrated-notion-productivity-tool-2jmi" target="_blank" rel="noopener noreferrer">Dev.to</a>.</p>
+        <article id="blog-Content">
+<p>As a student developer, I'm surrounded by deadlines. At times, it becomes hard to keep track and identify which deadline to focus on when you are juggling multiple of them. To ease this process and reduce my procrastination on certain tasks, I developed <strong>GitDone</strong>, and this is the story of how it went from a simple idea to a full-stack, cloud-native application.</p>
+
+<p>GitDone is an open-source productivity tool that integrates with GitHub. It lets developers create real-time deadline countdowns for any repository goal-a project shipment, a bug fix, or a version update. The countdown automatically completes when a commit message containing a specific keyword is pushed to the repository. These countdowns can even be embedded in tools like Notion, keeping your entire workflow in one place.</p>
+
+<p><a href="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyxq0gfa0lqdogeuyilw0.png" class="article-body-image-wrapper"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyxq0gfa0lqdogeuyilw0.png" alt="GitDone Logo" loading="lazy"></a></p>
+
+<h3>
+  <a name="the-initial-spark-prototyping-with-an-ai-partner" href="#the-initial-spark-prototyping-with-an-ai-partner">
+  </a>
+  The Initial Spark: Prototyping with an AI Partner
+</h3>
+
+<p>The project started with a simple frontend. I drafted the first version with standard HTML and CSS, but I wanted to build a more modern and user-friendly experience. For this, I turned to <strong>Amazon Kiro</strong>.</p>
+
+<p>I used Kiro to help brainstorm the project requirements, outline the architecture, and break down the development into manageable tasks. Its integrated AI agent was instrumental in the frontend development, helping me:</p>
+
+<ul>
+<li>Refactor my stylesheet for a fully responsive, mobile-first design.</li>
+<li>Implement a JavaScript-powered light/dark mode for better user experience.</li>
+<li>Create the client-side logic to dynamically display the unique embed link for each goal.</li>
+</ul>
+
+<h3>
+  <a name="the-leap-to-the-cloud-architecting-for-production" href="#the-leap-to-the-cloud-architecting-for-production">
+  </a>
+  The Leap to the Cloud: Architecting for Production
+</h3>
+
+<p>A local prototype is one thing, but a real-world application needs to be reliable, scalable, and secure. This meant deploying to the cloud. I chose AWS and designed a <strong>3-tier architecture</strong> to separate the application's concerns.</p>
+
+<ul>
+<li>
+<strong>The Backend:</strong> A Python application built with the <strong>Flask</strong> framework, serving a REST API and dynamically rendering the frontend.</li>
+<li>
+<strong>The Data Layer:</strong> A managed <strong>AWS RDS PostgreSQL</strong> database to ensure data was persistent and secure.</li>
+<li>
+<strong>The Compute Layer:</strong> <strong>AWS Elastic Beanstalk</strong> to manage the underlying EC2 server infrastructure, handling everything from deployment to load balancing and health monitoring.</li>
+<li>
+<strong>The Edge Layer:</strong> <strong>AWS CloudFront</strong> to act as a CDN, caching static assets closer to users and providing security by managing the custom domain (<code>gitdone.online</code>) and terminating the SSL/TLS certificate.</li>
+</ul>
+
+<p>This setup was robust on paper, but making all the pieces work together was the real challenge.</p>
+
+<h3>
+  <a name="the-five-circles-of-debugging-hell-a-story-of-challenges" href="#the-five-circles-of-debugging-hell-a-story-of-challenges">
+  </a>
+  The "Five Circles of Debugging Hell": A Story of Challenges
+</h3>
+
+<p>Deploying a multi-service application for the first time is a trial by fire. I systematically troubleshooted my way through a series of critical, real-world cloud engineering problems.</p>
+
+<h4>
+  <a name="1-the-sqlite-death-cycle" href="#1-the-sqlite-death-cycle">
+  </a>
+  1. The SQLite "Death Cycle"
+</h4>
+
+<p>My first major mistake was using a file-based SQLite database. My application worked perfectly until the first redeployment. I was horrified to find that <strong>100% of the application data was being wiped out</strong> every time I pushed new code. I learned a hard lesson about the ephemeral nature of cloud servers. This forced me to re-architect the data layer, migrating to AWS RDS to achieve true data persistence.</p>
+
+<h4>
+  <a name="2-the-application-wont-start" href="#2-the-application-wont-start">
+  </a>
+  2. The Application Won't Start
+</h4>
+
+<p>After migrating to RDS, my application still wouldn't deploy. Digging through the Elastic Beanstalk logs, I found two new culprits:</p>
+
+<ul>
+<li>
+<code>ModuleNotFoundError</code>: My <code>application.py</code> file structure and the Elastic Beanstalk <code>WSGIPath</code> configuration were not aligned.</li>
+<li>
+<code>SQLAlchemy URL Parse Error</code>: A simple typo in the <code>DATABASE_URL</code> environment variable was causing the application to crash on startup.</li>
+</ul>
+
+<h4>
+  <a name="3-the-networking-maze" href="#3-the-networking-maze">
+  </a>
+  3. The Networking Maze
+</h4>
+
+<p>With the application finally starting, it still couldn't connect to the database, resulting in 504 Gateway Timeout errors. This led me deep into AWS networking. The solution was to configure a precise set of <strong>Security Group</strong> rules to act as a firewall, creating a secure bridge between the services:</p>
+
+<ul>
+<li>A rule to allow CloudFront to talk to Elastic Beanstalk.</li>
+<li>A rule to allow Elastic Beanstalk to talk to the RDS database.</li>
+<li>A temporary rule to allow my local machine to connect to the database to initialize the tables.</li>
+</ul>
+
+<h4>
+  <a name="4-the-stuck-stack" href="#4-the-stuck-stack">
+  </a>
+  4. The Stuck Stack
+</h4>
+
+<p>At one point, a failed configuration update threw the environment into an <code>UPDATE_ROLLBACK_FAILED</code> state. The Elastic Beanstalk console was locked. I had to learn how to use the <strong>AWS CloudFormation</strong> console to manually intervene, skip the failing resource, and force the rollback to complete, successfully rescuing the "stuck" environment.</p>
+
+<h3>
+  <a name="automating-success-the-cicd-pipeline" href="#automating-success-the-cicd-pipeline">
+  </a>
+  Automating Success: The CI/CD Pipeline
+</h3>
+
+<p>After solving these issues, I automated the entire deployment workflow by engineering a CI/CD pipeline with <strong>AWS CodePipeline</strong>. Now, every <code>git push</code> to the main branch on GitHub automatically triggers a deployment to Elastic Beanstalk. This eliminated a 5-step manual process, reduced the risk of human error, and enabled true continuous delivery.</p>
+
+<h3>
+  <a name="aws-archtecture" href="#aws-archtecture">
+  </a>
+  AWS Archtecture
+</h3>
+
+<p><a href="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvh25npkvde13c1ct52ld.png" class="article-body-image-wrapper"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvh25npkvde13c1ct52ld.png" alt=" " loading="lazy"></a></p>
+
+<h3>
+  <a name="the-final-product-amp-whats-next" href="#the-final-product-amp-whats-next">
+  </a>
+  The Final Product &amp; What's Next
+</h3>
+
+<p>After a long journey of building and debugging, GitDone is now a fully functional, stable, and scalable application running on a professional-grade cloud architecture.</p>
+
+<p>The project is fully open-sourced, and the ultimate goal is for the community to contribute and help shape its future, adding the features and integrations they desire most. The next steps I envision are integrating email notifications for deadlines and expanding support to other Git providers like GitLab. I hope to see contributions made to this project to take to new heights.</p>
+
+<p>You can try the live application at <a href="https://gitdone.online" target="_blank" rel="noopener noreferrer"><strong>gitdone.online</strong></a> and view the code on the <a href="https://github.com/ChiragAJain/Git-Done" target="_blank" rel="noopener noreferrer"><strong>GitHub Repo</strong></a>. Thanks for reading!</p>
+
+<p>Demo Video:<br>
+  <iframe src="https://www.youtube.com/embed/iK-R61g4Vng" style="width: 100%; aspect-ratio: 16 / 9;" allowfullscreen loading="lazy">
+  </iframe>
+</p>
+        </article>
+        <p class="site-footer">© 2026 Chirag Jain</p>
+    </main>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+            const open = navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        function closeMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+        document.addEventListener('click', function (event) {
+            const navPanel = document.querySelector('.nav-panel');
+            const navMenu = document.getElementById('navMenu');
+            if (!navPanel.contains(event.target) && navMenu.classList.contains('active')) closeMenu();
+        });
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768) closeMenu();
+        });
+    </script>
+</body>
+</html>
