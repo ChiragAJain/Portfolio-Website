@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Self-Training Agents in Manufacturing: Closing the Gap Between Simulation and Real Production — Chirag Jain</title>
+    <title>Self-Training Agents in Manufacturing: Closing the Gap Between Simulation and Real Production â€” Chirag Jain</title>
     <meta name="description" content="Self-training agents in manufacturing: closing the sim-to-real gap for production systems.">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="stylesheet" href="../index.css?v=20260712j">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,13 +36,13 @@
     </nav>
 
     <main class="content article-wrap">
-        <a class="back-link" href="../Blog.html">← All posts</a>
+        <a class="back-link" href="../Blog.html">â† All posts</a>
         <h1 id="blog-Title">Self-Training Agents in Manufacturing: Closing the Gap Between Simulation and Real Production</h1>
         <div class="article-meta">
             <span>Agentic AI</span>
-            <span>·</span>
+            <span>Â·</span>
             <span>Manufacturing</span>
-            <span>·</span>
+            <span>Â·</span>
             <span>Reinforcement Learning</span>
         </div>
         <p class="source-note">Originally published on <a href="https://medium.com/@chiragajay.jain/self-training-agents-in-manufacturing-closing-the-gap-between-simulation-and-real-production-12eb02b40a97" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
@@ -47,17 +50,17 @@
 <p><img alt="" src="https://cdn-images-1.medium.com/max/1024/0*_x3rvriTTIpzoOTk"></p><h2>Reinforcement Learning in Steel Rolling: A Real Industrial Case</h2>
 <p>Maintaining consistent quality in steel strip rolling is notoriously difficult. Variations in incoming material properties, roll wear, cooling effectiveness, and tension can quickly push the process away from optimal flatness and thickness targets. Traditional control systems often require frequent manual retuning, and even then, performance can degrade as conditions change.</p>
 <p>Researchers have explored reinforcement learning as a way to address this challenge. In a documented case study on flatness control in steel strip rolling, Deng and colleagues developed an ensemble reinforcement learning approach based on Proximal Policy Optimization (PPO). Multiple actors interacted with the process environment in parallel, and the system selectively used the best-performing experience to update the policy. The objective was to achieve better process capability and smoother control actions than both conventional methods and standard reinforcement learning baselines.</p>
-<p>The study demonstrated meaningful improvements in key performance indicators within a simulated industrial rolling environment, highlighting how reinforcement learning can be structured for complex, real-world process control tasks where stability and constraint satisfaction matter. This kind of work illustrates a growing interest in systems that can adapt their behaviour based on ongoing interaction with the actual process rather than relying solely on pre-defined models or periodic offline retraining (Deng et al., 2022).</p>
-<p>Broader efforts in the metals industry point in a similar direction. SMS group has promoted the concept of the “Learning Steel Plant,” with Big River Steel in Arkansas positioned as an early example. The vision is a facility that continuously collects data across the production chain and uses artificial intelligence to optimize operations in response to changing conditions, moving beyond static automation toward ongoing self-improvement (SMS group).</p>
+<p>The study demonstrated meaningful improvements in key performance indicators within a simulated industrial rolling environment, highlighting how reinforcement learning can be structured for complex, real-world process control tasks where stability and constraint satisfaction matter. This kind of work illustrates a growing interest in systems that can adapt their behaviour based on ongoing interaction with the actual process rather than relying solely on pre-defined models or periodic offline retraining (Deng et al.,Â 2022).</p>
+<p>Broader efforts in the metals industry point in a similar direction. SMS group has promoted the concept of the â€œLearning Steel Plant,â€ with Big River Steel in Arkansas positioned as an early example. The vision is a facility that continuously collects data across the production chain and uses artificial intelligence to optimize operations in response to changing conditions, moving beyond static automation toward ongoing self-improvement (SMSÂ group).</p>
 <p>These examples reflect a wider shift: from AI systems that are trained once and deployed with the hope they remain effective, to agents designed to keep learning safely from real operational data.</p>
-<h2>Why “Deploy and Freeze” Is a Dead End in Industry</h2>
+<h2>Why â€œDeploy and Freezeâ€ Is a Dead End inÂ Industry</h2>
 <p>Most enterprise AI deployments still follow a waterfall pattern:</p>
 <ol>
 <li>Collect data.</li>
-<li>Train model (or policy).</li>
+<li>Train model (orÂ policy).</li>
 <li>Validate offline / in simulation.</li>
 <li>Deploy.</li>
-<li>Hope the world does not change too much.</li>
+<li>Hope the world does not change tooÂ much.</li>
 </ol>
 <p>In manufacturing and energy, the world changes constantly:</p>
 <ul>
@@ -67,54 +70,54 @@
 <li>New product grades or specifications are introduced regularly.</li>
 <li>Operators on different shifts have slightly different preferred operating points.</li>
 </ul>
-<p>A policy that was excellent in one period can become actively suboptimal or unsafe later.</p>
+<p>A policy that was excellent in one period can become actively suboptimal or unsafeÂ later.</p>
 <p>Self-training (also called continual learning, lifelong RL, or online adaptation) refers to the capability for an agent to keep improving its policy after deployment using real interaction data, without requiring a full retraining cycle and without unacceptable risk.</p>
-<h2>The Fundamental Tension: Exploration vs. Survival</h2>
-<p>Reinforcement learning improves through experience. In industrial systems, the most valuable experience — near-failures, edge cases, and the specific combinations of fouling, new feedstock, and environmental conditions — is rare. The cost of bad experience can be measured in significant financial loss or safety incidents.</p>
+<h2>The Fundamental Tension: Exploration vs.Â Survival</h2>
+<p>Reinforcement learning improves through experience. In industrial systems, the most valuable experienceâ€Šâ€”â€Šnear-failures, edge cases, and the specific combinations of fouling, new feedstock, and environmental conditionsâ€Šâ€”â€Šis rare. The cost of bad experience can be measured in significant financial loss or safety incidents.</p>
 <p>This creates three practical constraints:</p>
 <ol>
 <li>Sample inefficiency is lethal. Plants cannot afford to collect millions of episodes on live equipment.</li>
-<li>Exploration must be bounded. The agent cannot try arbitrary actions that risk equipment or product.</li>
+<li>Exploration must be bounded. The agent cannot try arbitrary actions that risk equipment orÂ product.</li>
 <li>Non-stationarity is the norm. The dynamics observed yesterday are already slightly different today.</li>
 </ol>
-<p>Everything that makes self-training agents viable in industry is an attempt to resolve this tension between the need to learn and the need to operate safely.</p>
-<h2>Closing the Sim-to-Real Gap: Techniques That Matter</h2>
-<p>Almost every serious industrial RL deployment begins in simulation. The critical question is how much of that simulation transfers to the real plant.</p>
-<p>High-fidelity digital twins are never perfect. There are always unmodeled dynamics such as gearbox backlash, sensor calibration differences, and emergent behaviours from interacting control loops.</p>
+<p>Everything that makes self-training agents viable in industry is an attempt to resolve this tension between the need to learn and the need to operateÂ safely.</p>
+<h2>Closing the Sim-to-Real Gap: Techniques ThatÂ Matter</h2>
+<p>Almost every serious industrial RL deployment begins in simulation. The critical question is how much of that simulation transfers to the realÂ plant.</p>
+<p>High-fidelity digital twins are never perfect. There are always unmodeled dynamics such as gearbox backlash, sensor calibration differences, and emergent behaviours from interacting controlÂ loops.</p>
 <p>Approaches that have shown promise in moving from research to production environments include:</p>
-<h2>System Identification + Residual Learning</h2>
+<h2>System Identification + ResidualÂ Learning</h2>
 <p>Instead of relying entirely on the simulator, the agent learns a residual policy or residual dynamics model on top of the physics-based simulator. The simulator captures the known bulk behaviour. The learned residual captures plant-specific realities that are difficult to model from first principles.</p>
-<h2>Domain Randomization Done Right</h2>
+<h2>Domain Randomization DoneÂ Right</h2>
 <p>Modern industrial practice tends to randomize selectively around the parameters most relevant to critical failure modes, rather than randomizing everything. The ranges are validated against actual plant data distributions.</p>
 <h2>World Models and Latent Imagination</h2>
-<p>Agents can learn compact latent world models that allow them to “imagine” many possible futures cheaply before acting on the real asset. The world model itself continues to be updated from real data after deployment. This direction builds on foundational work such as the Dreamer family of algorithms (Hafner et al., DeepMind).</p>
+<p>Agents can learn compact latent world models that allow them to â€œimagineâ€ many possible futures cheaply before acting on the real asset. The world model itself continues to be updated from real data after deployment. This direction builds on foundational work such as the Dreamer family of algorithms (Hafner et al., DeepMind).</p>
 <p>These techniques, used in combination, help agents adapt to new situations more quickly while reducing the risk of harmful actions on live equipment.</p>
-<h2>Safe Online Adaptation Techniques That Actually Ship</h2>
-<p>Once an agent is running on the real plant, further improvement requires real experience. Several patterns have proven useful for keeping adaptation safe enough for closed-loop or high-autonomy advisory use:</p>
-<h2>Residual Policies with Action Bounds</h2>
+<h2>Safe Online Adaptation Techniques That ActuallyÂ Ship</h2>
+<p>Once an agent is running on the real plant, further improvement requires real experience. Several patterns have proven useful for keeping adaptation safe enough for closed-loop or high-autonomy advisoryÂ use:</p>
+<h2>Residual Policies with ActionÂ Bounds</h2>
 <p>The RL component outputs deltas or corrections on top of a trusted baseline controller (such as PID or MPC), rather than absolute setpoints. The magnitude of changes is hard-limited by a shielding layer. This significantly reduces the effective exploration space while still allowing intelligent adjustments.</p>
 <h2>Offline-to-Online Pipelines</h2>
-<p>The agent is first trained extensively on logged historical data and simulator data. Only after demonstrating strong performance in shadow mode does it receive permission to make limited online updates. Many deployments stay within careful fine-tuning inside a tight trust region.</p>
+<p>The agent is first trained extensively on logged historical data and simulator data. Only after demonstrating strong performance in shadow mode does it receive permission to make limited online updates. Many deployments stay within careful fine-tuning inside a tight trustÂ region.</p>
 <h2>Lyapunov-Inspired or Control Barrier Safeguards</h2>
-<p>Some rigorous deployments maintain explicit certificates or barrier functions that the adaptation process is not allowed to violate. Updates that would push the system toward unsafe regions are rejected or heavily damped. This draws from research on safe reinforcement learning and control barrier functions (Brunke, Ames, Fisac et al.).</p>
+<p>Some rigorous deployments maintain explicit certificates or barrier functions that the adaptation process is not allowed to violate. Updates that would push the system toward unsafe regions are rejected or heavily damped. This draws from research on safe reinforcement learning and control barrier functions (Brunke, Ames, Fisac etÂ al.).</p>
 <h2>Conservative Q-Learning and Pessimistic Value Estimates</h2>
-<p>When performing online updates, the agent can be trained with pessimistic (lower-bound) estimates of value for state-action pairs it has not seen frequently. This encourages natural caution in regions with limited data (Levine, Kumar, Singh et al.).</p>
-<h2>Human Teaching as Dense Reward</h2>
+<p>When performing online updates, the agent can be trained with pessimistic (lower-bound) estimates of value for state-action pairs it has not seen frequently. This encourages natural caution in regions with limited data (Levine, Kumar, Singh etÂ al.).</p>
+<h2>Human Teaching as DenseÂ Reward</h2>
 <p>When experienced operators override the agent or make manual adjustments, modern systems can treat these interventions as high-value training signals. Some implementations capture the reasoning behind operator actions and incorporate them into reward shaping or new constraints. This is often one of the highest-bandwidth learning opportunities available.</p>
 <h2>Handling Rare but Catastrophic Events</h2>
 <p>Failures that occur infrequently can still destroy the business case for an entire agent deployment.</p>
 <p>Self-training systems that remain viable in production tend to use several complementary strategies:</p>
 <ul>
 <li>Prioritized experience replay that preserves rare, high-consequence transitions.</li>
-<li>Hindsight experience replay and goal-conditioned variants that allow learning from failures by re-labeling what the agent could have been trying to achieve.</li>
-<li>Explicit injection of difficult “nightmare” scenarios into the world model or simulator so the agent can practice recovery many times in imagination.</li>
+<li>Hindsight experience replay and goal-conditioned variants that allow learning from failures by re-labeling what the agent could have been trying toÂ achieve.</li>
+<li>Explicit injection of difficult â€œnightmareâ€ scenarios into the world model or simulator so the agent can practice recovery many times in imagination.</li>
 <li>Separate emergency or recovery policies trained specifically on tail events, kept distinct from the nominal optimization policy.</li>
 </ul>
-<h2>The Meta-Learning Angle: Learning to Adapt Fast</h2>
+<h2>The Meta-Learning Angle: Learning to AdaptÂ Fast</h2>
 <p>The most advanced form of self-training is not just improving on one specific asset. It is learning how to become effective in new situations quickly.</p>
 <p>Meta-RL and contextual policy approaches aim to train agents that can identify relevant differences from limited observations and adapt their behaviour rapidly when moved to a new product grade or a slightly different piece of equipment. In practice, this often involves a base policy trained across multiple similar assets, combined with a small context encoder and rapid fine-tuning mechanisms.</p>
 <p>While still an active area of research, these ideas are being explored in robotics and process control settings where rapid adaptation to new conditions is valuable.</p>
-<h2>What “Self-Training” Does Not Mean</h2>
+<h2>What â€œSelf-Trainingâ€ Does NotÂ Mean</h2>
 <p>It is important to set clear boundaries:</p>
 <ul>
 <li>It does not mean the agent is free to explore the full action space without oversight.</li>
@@ -122,37 +125,37 @@
 <li>It does not mean the policy can drift arbitrarily far from validated and approved behaviour.</li>
 <li>It does not remove the need for monitoring, governance, and periodic human review of objectives and constraints.</li>
 </ul>
-<p>The most effective self-training systems are better understood as continuously cautious adaptation within a managed trust region, heavily regularized by physics, shielding mechanisms, and human input.</p>
+<p>The most effective self-training systems are better understood as continuously cautious adaptation within a managed trust region, heavily regularized by physics, shielding mechanisms, and humanÂ input.</p>
 <h2>Organizational Implications</h2>
-<p>Self-training agents change the operating model more deeply than one-time deployed models:</p>
+<p>Self-training agents change the operating model more deeply than one-time deployedÂ models:</p>
 <ul>
-<li>The value of high-quality historical logs increases significantly. Every shift becomes potential training data.</li>
+<li>The value of high-quality historical logs increases significantly. Every shift becomes potential trainingÂ data.</li>
 <li>Operator skill becomes strategic. The best operators are not only running the plant but also teaching the next generation of autonomous capability through their interventions and reasoning.</li>
-<li>Model governance evolves into policy governance. Organizations must audit learning processes, evolving reward functions, and adaptation rules rather than static models.</li>
-<li>Cross-plant learning becomes more feasible when one site’s agent discovers something useful about a particular failure mode or adaptation strategy.</li>
+<li>Model governance evolves into policy governance. Organizations must audit learning processes, evolving reward functions, and adaptation rules rather than staticÂ models.</li>
+<li>Cross-plant learning becomes more feasible when one siteâ€™s agent discovers something useful about a particular failure mode or adaptation strategy.</li>
 </ul>
 <h2>Key Takeaways</h2>
 <ol>
-<li>Self-training is becoming necessary for long-lived industrial agents. The world drifts; policies that cannot adapt become liabilities over time.</li>
+<li>Self-training is becoming necessary for long-lived industrial agents. The world drifts; policies that cannot adapt become liabilities overÂ time.</li>
 <li>The techniques that make adaptation safe (residual policies, constrained and conservative methods, barrier functions, world models) are as important as those that make it effective.</li>
-<li>Simulation remains essential for sufficient experience volume, but sim-to-real transfer techniques determine whether that experience is useful or risky.</li>
+<li>Simulation remains essential for sufficient experience volume, but sim-to-real transfer techniques determine whether that experience is useful orÂ risky.</li>
 <li>Human teaching during real operations is frequently one of the highest-leverage signals an industrial self-training system receives.</li>
-<li>Organizations that treat every production hour as both an economic event and a learning opportunity — and build the corresponding data infrastructure, culture, and governance — are better positioned to benefit from these systems.</li>
+<li>Organizations that treat every production hour as both an economic event and a learning opportunityâ€Šâ€”â€Šand build the corresponding data infrastructure, culture, and governanceâ€Šâ€”â€Šare better positioned to benefit from theseÂ systems.</li>
 </ol>
-<p>The distinction between agents that arrive with fixed knowledge and agents designed to keep learning what they need to know, safely and effectively, is becoming a meaningful differentiator between demonstration projects and production systems that improve over time.</p>
+<p>The distinction between agents that arrive with fixed knowledge and agents designed to keep learning what they need to know, safely and effectively, is becoming a meaningful differentiator between demonstration projects and production systems that improve overÂ time.</p>
 <h2>Key Technical Foundations</h2>
 <p>This article draws from several lines of research and documented industrial efforts:</p>
 <p><em>Reinforcement learning for industrial process control, including a case study in flatness control in steel strip rolling (Deng et al., 2022, Computers in Industry).</em></p>
-<p><em>The “Learning Steel Plant” concept and its early implementation at Big River Steel (SMS group).</em></p>
+<p><em>The â€œLearning Steel Plantâ€ concept and its early implementation at Big River Steel (SMSÂ group).</em></p>
 <p><em>World models and latent imagination from the Dreamer family of algorithms (Hafner et al., DeepMind).</em></p>
-<p><em>Conservative and offline reinforcement learning methods (Levine, Kumar, Singh et al.).</em></p>
-<p><em>Safe reinforcement learning using control barrier functions and shielding approaches (Brunke, Ames, Fisac et al.).</em></p>
+<p><em>Conservative and offline reinforcement learning methods (Levine, Kumar, Singh etÂ al.).</em></p>
+<p><em>Safe reinforcement learning using control barrier functions and shielding approaches (Brunke, Ames, Fisac etÂ al.).</em></p>
 <p>Broader work on meta-reinforcement learning and rapid adaptation in robotics and process control settings.</p>
 <p>Additional insights on practical considerations in metals and process industries come from industry discussions and supplier perspectives on autonomous optimization in production environments.</p>
-<p>Written for practitioners navigating the gap between promising simulation results and the realities of keeping agents effective and safe on live equipment over time.</p>
-<p><em>- Chirag Jain</em></p>
+<p>Written for practitioners navigating the gap between promising simulation results and the realities of keeping agents effective and safe on live equipment overÂ time.</p>
+<p><em>- ChiragÂ Jain</em></p>
         </article>
-        <p class="site-footer">© 2026 Chirag Jain</p>
+        <p class="site-footer">Â© 2026 Chirag Jain</p>
     </main>
     <script>
         function toggleMenu() {
