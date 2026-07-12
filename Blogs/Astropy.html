@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>AstroPy: Astrophysics using Python â€” Chirag Jain</title>
+    <title>AstroPy: Astrophysics using Python — Chirag Jain</title>
     <meta name="description" content="A beginner's guide to AstroPy for astronomical computations, coordinates, units, and FITS files.">
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../favicon.ico" sizes="any">
@@ -29,14 +29,14 @@
     </nav>
 
     <main class="content article-wrap">
-        <a class="back-link" href="../Blog.html">â† All posts</a>
+        <a class="back-link" href="../Blog.html">← All posts</a>
 
         <h1 id="blog-Title">AstroPy: Astrophysics using Python</h1>
         <div class="article-meta">
             <span>Python</span>
-            <span>Â·</span>
+            <span>·</span>
             <span>Astronomy</span>
-            <span>Â·</span>
+            <span>·</span>
             <span>Tutorial</span>
         </div>
 
@@ -48,7 +48,7 @@
                 science, and backed by libraries built for scientific computing.
             </p>
             <p>
-                One of those libraries is <strong>AstroPy</strong> â€” a community-driven, open-source package for core
+                One of those libraries is <strong>AstroPy</strong> — a community-driven, open-source package for core
                 astronomy tasks. It handles FITS files, VO tables, ASCII tables, physical constants, units, celestial
                 coordinates, and time calculations with standardized data structures.
             </p>
@@ -75,7 +75,7 @@
             </p>
             <pre class="code-block" tabindex="0"><code>from astropy import units
 
-# Winter solstice (approx. Sunâ€“Earth distance)
+# Winter solstice (approx. Sun–Earth distance)
 distance_se = 147_090_000 * units.km
 distance_se_ly = distance_se.to(units.lightyear)
 time = 497 * units.s
@@ -95,7 +95,7 @@ Speed of light (km/s) = 295955.7344 km / s</code></pre>
             <h2>Celestial coordinates</h2>
             <p>
                 In simple terms, <strong>Right Ascension (RA)</strong> is celestial longitude and
-                <strong>Declination (Dec)</strong> is celestial latitude. AstroPyâ€™s coordinates module works with that
+                <strong>Declination (Dec)</strong> is celestial latitude. AstroPy’s coordinates module works with that
                 system directly:
             </p>
             <pre class="code-block" tabindex="0"><code>from astropy.coordinates import get_sun
@@ -123,22 +123,22 @@ print(get_sun(my_time).to_string(style="hmsdms"))</code></pre>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>H â€” Hours</td>
-                        <td>D â€” Degrees</td>
+                        <td>H — Hours</td>
+                        <td>D — Degrees</td>
                     </tr>
                     <tr>
-                        <td>M â€” Minutes</td>
-                        <td>M â€” Minutes</td>
+                        <td>M — Minutes</td>
+                        <td>M — Minutes</td>
                     </tr>
                     <tr>
-                        <td>S â€” Seconds</td>
-                        <td>S â€” Seconds</td>
+                        <td>S — Seconds</td>
+                        <td>S — Seconds</td>
                     </tr>
                 </tbody>
             </table>
             <p>
                 So at the time of writing, the Sun was at about
-                <code>18h 28m 25.33s</code> RA and <code>âˆ’23Â° 16â€² 31.68â€³</code> Dec.
+                <code>18h 28m 25.33s</code> RA and <code>−23° 16′ 31.68″</code> Dec.
             </p>
 
             <h2>Working with FITS files</h2>
@@ -189,7 +189,7 @@ No.  Name      Ver    Type      Cards  Dimensions   Format
             </p>
         </article>
 
-        <p class="site-footer">Â© 2026 Chirag Jain</p>
+        <p class="site-footer">© 2026 Chirag Jain</p>
     </main>
 
     <script>
