@@ -9,8 +9,9 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="index.css?v=20260712r">
+    <link rel="stylesheet" href="index.css?v=20260712s">
     <link rel="stylesheet" href="views-counter.css">
+    <link rel="stylesheet" href="inkpad.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,600;1,7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,7 +58,7 @@
                     <strong>Published</strong> IEEE<br>
                     <strong>Creds</strong> AWS SAA-C03 · CGPA 9.2
                 </p>
-                <p class="view-counter" title="Unique browser sessions (approx.)">
+                <p class="view-counter" title="Page views">
                     <span class="view-counter-label">Views</span>
                     <span data-view-count>…</span>
                 </p>
@@ -98,6 +99,21 @@
                         <span>36-image SEM batch</span>
                     </div>
                 </div>
+
+                <!-- Fun desk toy — not profile-related -->
+                <section class="inkpad-wrap" aria-label="Ink pad">
+                    <div class="inkpad-bar">
+                        <div>
+                            <div class="inkpad-title">Ink pad</div>
+                            <div class="inkpad-hint">A little distraction — click or drag</div>
+                        </div>
+                        <div class="inkpad-actions">
+                            <button type="button" id="inkpadSplash">Splash</button>
+                            <button type="button" id="inkpadClear">Clear</button>
+                        </div>
+                    </div>
+                    <canvas id="inkpad" width="800" height="240" role="img" aria-label="Interactive ink drawing surface"></canvas>
+                </section>
             </section>
         </div>
 
@@ -113,6 +129,7 @@
     </div>
 
     <script src="views.js" defer></script>
+    <script src="inkpad.js" defer></script>
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');

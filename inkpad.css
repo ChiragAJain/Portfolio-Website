@@ -1,0 +1,80 @@
+/* Ink pad desk toy — playful, not profile-related */
+
+.inkpad-wrap {
+    margin-top: 0.75rem;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.inkpad-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid var(--ink);
+    background: var(--paper-deep);
+}
+
+.inkpad-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink);
+}
+
+.inkpad-hint {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+}
+
+.inkpad-actions {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.inkpad-actions button {
+    appearance: none;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.3rem 0.55rem;
+    cursor: pointer;
+    transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
+}
+
+.inkpad-actions button:hover {
+    background: var(--ink);
+    color: var(--paper);
+    transform: translateY(-1px);
+}
+
+#inkpad {
+    display: block;
+    width: 100%;
+    height: 200px;
+    cursor: crosshair;
+    touch-action: none;
+    background: #f3efe6;
+}
+
+@media (min-width: 900px) {
+    #inkpad {
+        height: 240px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .inkpad-actions button:hover {
+        transform: none;
+    }
+}

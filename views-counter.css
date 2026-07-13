@@ -70,3 +70,17 @@
 .lp-foot .view-counter {
     border-color: var(--rule);
 }
+
+/* SVG badge fallback when JSON APIs are blocked in the browser */
+.view-counter-badge {
+    display: block;
+    height: 18px;
+    width: auto;
+    max-width: 140px;
+    vertical-align: middle;
+}
+
+.view-counter[data-badge="1"] {
+    padding: 0.3rem 0.45rem;
+    gap: 0;
+}
