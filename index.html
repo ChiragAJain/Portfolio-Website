@@ -10,6 +10,7 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="index.css?v=20260712r">
+    <link rel="stylesheet" href="views-counter.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,600;1,7..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,6 +56,10 @@
                     <strong>Research</strong> INSA Fellow<br>
                     <strong>Published</strong> IEEE<br>
                     <strong>Creds</strong> AWS SAA-C03 · CGPA 9.2
+                </p>
+                <p class="view-counter" title="Unique browser sessions (approx.)">
+                    <span class="view-counter-label">Views</span>
+                    <span data-view-count>…</span>
                 </p>
             </aside>
 
@@ -107,6 +112,7 @@
         </footer>
     </div>
 
+    <script src="views.js" defer></script>
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
